@@ -28,6 +28,10 @@ The full hardware, driver and software records (including the latest versions av
 | Its own speed under an all-core CPU load | −3% | −28% | 0% | — |
 | Server RAM + accelerator memory | ~13–15 GB + 6–11 GB NPU shared | 8.5 GB | 9.5 GB + 9.6 GB iGPU shared | 14.8 GB VRAM |
 | Tool calling (20 cases) | 20/20 | — | — | 20/20 |
+| Thinking mode, a reasoning puzzle | 286 s | — | 216 s | 25 s |
+| 4 requests at once, combined speed | 6.5 tokens/s (queued one at a time) | — | 9.2 (batched) | 74 |
+| Server kept loaded, idle | 14.9 GB RAM + 6.4 GB NPU shared | — | 5.2 GB RAM + 6.4 GB iGPU shared | 14.5 GB VRAM |
+| 8 minutes of sustained generation | no throttling | — | no throttling | no throttling (4 min, 82 °C) |
 
 - **Generation speed is the same on the NPU, CPU and iGPU** (~10 tokens/s), because memory bandwidth limits all three. The RTX is ~10x faster.
 - **The NPU's strength is staying out of the way:** CPU load and package power stay at idle levels while it generates, and it isn't slowed by heavy CPU work.

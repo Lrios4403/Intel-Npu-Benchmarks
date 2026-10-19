@@ -167,6 +167,81 @@ Both runs used `cache_bench.py`. Run 1 overlapped a Rust build on the same machi
 
 Even loaded and idle, the NPU server keeps ~15 GB of RAM plus 6.4 GB of NPU shared memory, with no measurable power draw.
 
+## Follow-up tests with resource tracking (`more_bench.py`)
+
+These ran from 20:07 to 21:09 on a quieter machine: Brave and ChatGPT were closed and the Rust build had been stopped. The resource monitor recorded throughout, and each step is labelled in `raw/markers.jsonl`. The same Qwen3 8B models were used: `cw` int4 on OVMS for the NPU and iGPU, Q4_K_M on Ollama for the RTX.
+
+### Idle cost: the server loaded, no requests
+
+| | RAM held by the server | Accelerator memory | Free RAM | Committed (system) | Package power |
+|---|---|---|---|---|---|
+| No server (baseline) | — | — | 12.3 GB | 35.9 GB | 29 W |
+| NPU (16k limit + PYRAMID) | **14.9 GB** (19.3 GB peak while loading) | 6.4 GB NPU shared | 5.2 GB (0.9 GB while loading) | 43.1 GB | 18 W* |
+| Intel iGPU | 5.2 GB | 6.4 GB iGPU shared | 13.0 GB | 33.0 GB | 21 W* |
+| RTX 5080 (Ollama) | ~0 GB | 14.5 GB VRAM | 14.4 GB | 45.8 GB | 21 W + 17 W GPU |
+
+\*Lower than the baseline because of background variation, so neither idle server has a measurable power cost. The difference is memory: kept loaded, the NPU server ties up ~15 GB of RAM, three times the iGPU server's.
+
+### Thinking mode on (Qwen3's default in agent tools; up to 3,000 tokens)
+
+| Task | NPU | Intel iGPU | RTX 5080 |
+|---|---|---|---|
+| Bat-and-ball puzzle | 286 s, 2,520 tokens | 216 s, 1,887 tokens | **25 s**, 1,814 tokens, correct |
+| Fibonacci function | 339 s, **hit the 3,000-token cap** before answering | 339 s, hit the cap | **38 s**, 2,840 tokens, wrote the function |
+| A tool call | 15 s, correct call | 14 s, correct call | 1.5 s, correct call |
+| First token | 5–8 s | 0.5–1.9 s | 0.25–0.4 s |
+
+The harness saved only the first 500 characters of each reply before checking it, and the NPU and iGPU answers to the bat-and-ball puzzle put the final number later than that. So those two answers are **unverified, not wrong**. The Fibonacci runs on the NPU and iGPU reasoned past the 3,000-token cap: the cw int4 build thought longer than the RTX's Q4_K_M build.
+
+At ~10 tokens/s, a thinking model on the NPU takes **4–6 minutes per non-trivial answer**. That's fine for background jobs and unworkable interactively.
+
+### Parallel requests (~1.1k-token prompt, 128 output tokens each)
+
+| Requests at once | NPU: wall time / combined speed | Intel iGPU | RTX 5080 |
+|---|---|---|---|
+| 1 | 15.6 s / 6.8 tokens/s | 16.0 s / 5.4 | 2.0 s / 56 |
+| 2 | 32.1 s / 6.6 (the requests finish at 16 s and 32 s) | 30.4 s / 7.3 | 2.7 s / 80 |
+| 4 | 63.5 s / 6.5 (16, 32, 48, 63 s) | 40.9 s / **9.2** | 5.8 s / 74 |
+
+**The NPU handles one request at a time:** extra requests queue, and combined throughput doesn't grow. The iGPU (continuous batching) and the RTX run them together. Agent tools that fire sub-tasks in parallel will queue on the NPU.
+
+### Sustained generation
+
+| | Duration | Requests | Speed, first 3 → last 3 requests | Accelerator load | Package power | Hottest sensor |
+|---|---|---|---|---|---|---|
+| NPU | 8 min | 16 | 9.6 → 9.3 tokens/s | NPU 97% (median) | 26 W | 49 °C |
+| Intel iGPU | 8 min | 20 | 8.6 → 10.8 tokens/s | iGPU rail 8.2 W | 30 W | 51 °C |
+| RTX 5080 | 4 min | 75 | 68 → 75 tokens/s | RTX 92%, 94 W avg (147 W peak) | 38 W + GPU | 82 °C (RTX) |
+
+**No throttling on any device.** Windows exposes only an ACPI thermal zone and the RTX sensor, not the CPU die temperature, so the NPU and iGPU rows show the hottest available sensor.
+
+### The 16k context limit
+
+| | ~15.5k-token prompt | ~17.5k-token prompt |
+|---|---|---|
+| NPU (`--max_prompt_len 16384`) | **194 s** to the first token, then a normal answer. NPU shared memory 11.0 GB, free RAM 0.1 GB. | **Rejected:** `HTTP 400 … Input length exceeds the maximum…` |
+| RTX 5080 (Ollama, `num_ctx` 20480) | 30.7 s (includes reloading the model for the larger context) | 14.3 s |
+
+The NPU fails cleanly at its compiled limit, with an error rather than silent truncation, but a near-limit prompt costs over three minutes before the first token.
+
+### Resources per step (medians for engine load; from `raw/monitor-summary.json`)
+
+| Step | CPU avg | Package W avg | NPU load | iGPU rail W | Server RAM max | Accelerator memory max | Free RAM min |
+|---|---|---|---|---|---|---|---|
+| NPU thinking | 13% | 26 | 97% | 0.4 | 15.6 GB | 7.7 GB NPU | 3.1 GB |
+| NPU parallel | 18% | 31 | 97% | 0.4 | 14.7 GB | 7.7 GB NPU | 2.7 GB |
+| NPU sustained | 13% | 26 | 97% | 0.3 | 14.7 GB* | 7.7 GB NPU | 8.9 GB |
+| NPU context (15.5k) | 21% | 34 | 95% | 0.2 | 14.7 GB | 11.0 GB NPU | 0.1 GB |
+| iGPU thinking | 14% | 30 | — | 7.8 | 5.4 GB | 6.4 GB iGPU | 11.9 GB |
+| iGPU parallel | 14% | 32 | — | 9.5 | 5.7 GB | 6.7 GB iGPU | 11.4 GB |
+| iGPU sustained | 13% | 30 | — | 8.2 | 5.6 GB | 6.7 GB iGPU | 10.5 GB |
+| RTX thinking | 30% | 47 + 97 GPU | — | 0.3 | ~0 | 14.6 GB VRAM | 13.7 GB |
+| RTX sustained | 26% | 38 + 94 GPU | — | 0.3 | ~0 | 14.7 GB VRAM | 11.0 GB |
+
+\*Windows trimmed OVMS's working set to 6.5 GB during the sustained run; its committed memory stayed allocated.
+
+All three keep CPU load low. The NPU uses no iGPU power but costs about three times the iGPU server's RAM. The RTX draws ~95 W on its own but keeps its 14.7 GB in VRAM, not system RAM.
+
 ## Files and rerun
 
 | Script (in `bench/`) | What it does |

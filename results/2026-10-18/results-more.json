@@ -1,0 +1,736 @@
+{
+  "npu": {
+    "startup_s": 23.2,
+    "thinking": [
+      {
+        "ttft_s": 7.65,
+        "total_s": 286.15,
+        "completion_tokens": 2520,
+        "thinking_chars": 6398,
+        "reply": "To solve the problem, we are given the following information:\n\n- The **total** cost of a bat and a ball is **$1.10**.\n- The **bat** costs **$1.00 more** than the **ball**.\n- We are to find the **cost of the ball**.\n\n---\n\n### Step 1: Define Variables\n\nLet the cost of the **ball** be:\n\n$$\nb = \\text{cost of the ball (in dollars)}\n$$\n\nThen, the cost of the **bat** is:\n\n$$\nb + 1.00\n$$\n\n---\n\n### Step 2: Use the Total Cost\n\nThe total cost of the bat and the ball is:\n\n$$\n(b) + (b + 1.00) = 1.10\n$$\n\nSimp",
+        "tool_calls": false,
+        "task": "bat and ball",
+        "ok": false
+      },
+      {
+        "ttft_s": 5.09,
+        "total_s": 339.14,
+        "completion_tokens": 3000,
+        "thinking_chars": 10533,
+        "reply": "",
+        "tool_calls": false,
+        "task": "fibonacci code",
+        "ok": false
+      },
+      {
+        "ttft_s": 5.03,
+        "total_s": 14.97,
+        "completion_tokens": 101,
+        "thinking_chars": 373,
+        "reply": "",
+        "tool_calls": true,
+        "task": "tool call",
+        "ok": true
+      }
+    ],
+    "parallel": {
+      "1": {
+        "wall_s": 15.6,
+        "aggregate_tps": 6.8,
+        "per_request_total_s": [
+          15.58
+        ],
+        "per_request_ttft_s": [
+          4.92
+        ],
+        "errors": []
+      },
+      "2": {
+        "wall_s": 32.1,
+        "aggregate_tps": 6.6,
+        "per_request_total_s": [
+          15.78,
+          32.13
+        ],
+        "per_request_ttft_s": [
+          4.82,
+          20.55
+        ],
+        "errors": []
+      },
+      "4": {
+        "wall_s": 63.5,
+        "aggregate_tps": 6.52,
+        "per_request_total_s": [
+          16.48,
+          47.99,
+          63.45,
+          31.87
+        ],
+        "per_request_ttft_s": [
+          4.89,
+          36.64,
+          52.75,
+          21.24
+        ],
+        "errors": []
+      }
+    },
+    "sustained": {
+      "minutes": 8,
+      "requests": 16,
+      "samples": [
+        {
+          "t": 1792380341.6,
+          "decode_tps": 9.34
+        },
+        {
+          "t": 1792380371.1,
+          "decode_tps": 9.35
+        },
+        {
+          "t": 1792380398.5,
+          "decode_tps": 10.0
+        },
+        {
+          "t": 1792380426.9,
+          "decode_tps": 9.85
+        },
+        {
+          "t": 1792380458.3,
+          "decode_tps": 9.65
+        },
+        {
+          "t": 1792380490.5,
+          "decode_tps": 9.31
+        },
+        {
+          "t": 1792380522.8,
+          "decode_tps": 9.29
+        },
+        {
+          "t": 1792380555.0,
+          "decode_tps": 9.32
+        },
+        {
+          "t": 1792380587.1,
+          "decode_tps": 9.28
+        },
+        {
+          "t": 1792380614.0,
+          "decode_tps": 9.3
+        },
+        {
+          "t": 1792380642.5,
+          "decode_tps": 9.24
+        },
+        {
+          "t": 1792380671.9,
+          "decode_tps": 9.34
+        },
+        {
+          "t": 1792380703.3,
+          "decode_tps": 9.21
+        },
+        {
+          "t": 1792380734.8,
+          "decode_tps": 9.14
+        },
+        {
+          "t": 1792380767.1,
+          "decode_tps": 9.25
+        },
+        {
+          "t": 1792380798.2,
+          "decode_tps": 9.36
+        }
+      ],
+      "first_3_avg_tps": 9.56,
+      "last_3_avg_tps": 9.25
+    },
+    "context": {
+      "15.5k": {
+        "ttft_s": 193.7,
+        "total_s": 203.68,
+        "completion_tokens": 64,
+        "thinking_chars": 0,
+        "tool_calls": false,
+        "reply_start": "In the early days of personal computing, hobbyists built machines from kits, used BASIC, and stored data on cassettes. M"
+      },
+      "17.5k": {
+        "error": "HTTP 400: {\"error\":\"Mediapipe execution failed. MP status - INVALID_ARGUMENT: CalculatorGraph::Run() failed: \\nCalculator::Process() for node \\\"LLMExecutor\\\" failed: Input length exceeds the maximum allowed length\"}",
+        "total_s": 0.2,
+        "reply_start": ""
+      }
+    }
+  },
+  "igpu": {
+    "startup_s": 15.2,
+    "thinking": [
+      {
+        "ttft_s": 0.79,
+        "total_s": 215.72,
+        "completion_tokens": 1887,
+        "thinking_chars": 4877,
+        "reply": "To solve the problem, we are given the following information:\n\n- A **bat and a ball** together cost **$1.10**.\n- The **bat costs $1.00 more** than the **ball**.\n- We are to find the **cost of the ball**.\n\n---\n\n### Step 1: Define the Variables\n\nLet the cost of the **ball** be:\n\n$$\nx \\quad \\text{(in dollars)}\n$$\n\nThen, the cost of the **bat** is:\n\n$$\nx + 1.00\n$$\n\n---\n\n### Step 2: Use the Total Cost\n\nThe total cost of the bat and the ball is:\n\n$$\nx + (x + 1.00) = 1.10\n$$\n\nSimplify the left-hand sid",
+        "tool_calls": false,
+        "task": "bat and ball",
+        "ok": false
+      },
+      {
+        "ttft_s": 0.53,
+        "total_s": 339.08,
+        "completion_tokens": 3000,
+        "thinking_chars": 9871,
+        "reply": "",
+        "tool_calls": false,
+        "task": "fibonacci code",
+        "ok": false
+      },
+      {
+        "ttft_s": 1.86,
+        "total_s": 13.54,
+        "completion_tokens": 110,
+        "thinking_chars": 416,
+        "reply": "",
+        "tool_calls": true,
+        "task": "tool call",
+        "ok": true
+      }
+    ],
+    "parallel": {
+      "1": {
+        "wall_s": 16.0,
+        "aggregate_tps": 5.42,
+        "per_request_total_s": [
+          16.04
+        ],
+        "per_request_ttft_s": [
+          7.07
+        ],
+        "errors": []
+      },
+      "2": {
+        "wall_s": 30.4,
+        "aggregate_tps": 7.32,
+        "per_request_total_s": [
+          28.73,
+          30.45
+        ],
+        "per_request_ttft_s": [
+          8.61,
+          14.31
+        ],
+        "errors": []
+      },
+      "4": {
+        "wall_s": 40.9,
+        "aggregate_tps": 9.18,
+        "per_request_total_s": [
+          37.71,
+          40.56,
+          40.85,
+          40.73
+        ],
+        "per_request_ttft_s": [
+          7.51,
+          13.66,
+          19.97,
+          24.4
+        ],
+        "errors": []
+      }
+    },
+    "sustained": {
+      "minutes": 8,
+      "requests": 20,
+      "samples": [
+        {
+          "t": 1792381915.9,
+          "decode_tps": 8.61
+        },
+        {
+          "t": 1792381946.5,
+          "decode_tps": 8.54
+        },
+        {
+          "t": 1792381974.9,
+          "decode_tps": 8.52
+        },
+        {
+          "t": 1792382004.5,
+          "decode_tps": 8.88
+        },
+        {
+          "t": 1792382030.4,
+          "decode_tps": 9.12
+        },
+        {
+          "t": 1792382056.3,
+          "decode_tps": 9.91
+        },
+        {
+          "t": 1792382080.8,
+          "decode_tps": 10.7
+        },
+        {
+          "t": 1792382106.1,
+          "decode_tps": 10.39
+        },
+        {
+          "t": 1792382129.9,
+          "decode_tps": 10.98
+        },
+        {
+          "t": 1792382151.4,
+          "decode_tps": 10.99
+        },
+        {
+          "t": 1792382175.5,
+          "decode_tps": 9.94
+        },
+        {
+          "t": 1792382200.7,
+          "decode_tps": 9.7
+        },
+        {
+          "t": 1792382225.2,
+          "decode_tps": 10.71
+        },
+        {
+          "t": 1792382250.5,
+          "decode_tps": 10.33
+        },
+        {
+          "t": 1792382274.5,
+          "decode_tps": 10.39
+        },
+        {
+          "t": 1792382296.6,
+          "decode_tps": 10.58
+        },
+        {
+          "t": 1792382321.0,
+          "decode_tps": 10.64
+        },
+        {
+          "t": 1792382340.5,
+          "decode_tps": 11.22
+        },
+        {
+          "t": 1792382364.5,
+          "decode_tps": 10.89
+        },
+        {
+          "t": 1792382389.7,
+          "decode_tps": 10.38
+        }
+      ],
+      "first_3_avg_tps": 8.56,
+      "last_3_avg_tps": 10.83
+    }
+  },
+  "rtx": {
+    "thinking": [
+      {
+        "ttft_s": 0.38,
+        "total_s": 24.63,
+        "completion_tokens": 1814,
+        "thinking_chars": 4489,
+        "reply": "To solve the problem, let's define the cost of the ball as $ x $ dollars. According to the problem, the bat costs $1.00 more than the ball, so the bat's cost is $ x + 1.00 $.\n\nThe total cost of the bat and the ball is given as $1.10. Therefore, we can write the equation:\n\n$$\nx + (x + 1.00) = 1.10\n$$\n\nSimplifying the left-hand side:\n\n$$\n2x + 1.00 = 1.10\n$$\n\nSubtract 1.00 from both sides:\n\n$$\n2x = 0.10\n$$\n\nNow divide both sides by 2:\n\n$$\nx = 0.05\n$$\n\nSo, the ball costs **$0.05** (or 5 cents).\n\n---",
+        "tool_calls": false,
+        "task": "bat and ball",
+        "ok": true
+      },
+      {
+        "ttft_s": 0.25,
+        "total_s": 37.95,
+        "completion_tokens": 2840,
+        "thinking_chars": 7288,
+        "reply": "Here's a well-documented Python function that computes the n-th Fibonacci number iteratively, along with a detailed docstring explaining its behavior, parameters, and examples:\n\n```python\ndef fibonacci(n):\n    \"\"\"\n    Return the n-th Fibonacci number using an iterative approach.\n\n    The Fibonacci sequence is defined as:\n    F(0) = 0, F(1) = 1, F(n) = F(n-1) + F(n-2) for n >= 2.\n\n    Parameters:\n    n (int): The index of the Fibonacci number to return. Must be a non-negative integer.\n\n    Return",
+        "tool_calls": false,
+        "task": "fibonacci code",
+        "ok": true
+      },
+      {
+        "ttft_s": 0.26,
+        "total_s": 1.52,
+        "completion_tokens": 96,
+        "thinking_chars": 362,
+        "reply": "",
+        "tool_calls": true,
+        "task": "tool call",
+        "ok": true
+      }
+    ],
+    "parallel": {
+      "1": {
+        "wall_s": 2.0,
+        "aggregate_tps": 56.03,
+        "per_request_total_s": [
+          1.98
+        ],
+        "per_request_ttft_s": [
+          0.49
+        ],
+        "errors": []
+      },
+      "2": {
+        "wall_s": 2.7,
+        "aggregate_tps": 79.83,
+        "per_request_total_s": [
+          2.66,
+          2.61
+        ],
+        "per_request_ttft_s": [
+          0.96,
+          0.56
+        ],
+        "errors": []
+      },
+      "4": {
+        "wall_s": 5.8,
+        "aggregate_tps": 73.58,
+        "per_request_total_s": [
+          5.73,
+          5.76,
+          5.7,
+          5.63
+        ],
+        "per_request_ttft_s": [
+          1.47,
+          1.84,
+          1.03,
+          0.57
+        ],
+        "errors": []
+      }
+    },
+    "sustained": {
+      "minutes": 4,
+      "requests": 75,
+      "samples": [
+        {
+          "t": 1792382628.7,
+          "decode_tps": 68.62
+        },
+        {
+          "t": 1792382632.4,
+          "decode_tps": 67.97
+        },
+        {
+          "t": 1792382635.8,
+          "decode_tps": 67.66
+        },
+        {
+          "t": 1792382639.6,
+          "decode_tps": 67.57
+        },
+        {
+          "t": 1792382642.9,
+          "decode_tps": 67.3
+        },
+        {
+          "t": 1792382645.9,
+          "decode_tps": 67.77
+        },
+        {
+          "t": 1792382649.9,
+          "decode_tps": 67.28
+        },
+        {
+          "t": 1792382653.0,
+          "decode_tps": 68.71
+        },
+        {
+          "t": 1792382656.5,
+          "decode_tps": 69.71
+        },
+        {
+          "t": 1792382659.8,
+          "decode_tps": 68.59
+        },
+        {
+          "t": 1792382662.9,
+          "decode_tps": 69.26
+        },
+        {
+          "t": 1792382666.1,
+          "decode_tps": 67.33
+        },
+        {
+          "t": 1792382669.8,
+          "decode_tps": 67.97
+        },
+        {
+          "t": 1792382673.2,
+          "decode_tps": 67.26
+        },
+        {
+          "t": 1792382676.0,
+          "decode_tps": 76.12
+        },
+        {
+          "t": 1792382679.0,
+          "decode_tps": 79.59
+        },
+        {
+          "t": 1792382681.8,
+          "decode_tps": 77.86
+        },
+        {
+          "t": 1792382685.5,
+          "decode_tps": 67.88
+        },
+        {
+          "t": 1792382688.8,
+          "decode_tps": 66.46
+        },
+        {
+          "t": 1792382692.5,
+          "decode_tps": 67.99
+        },
+        {
+          "t": 1792382695.6,
+          "decode_tps": 67.55
+        },
+        {
+          "t": 1792382698.8,
+          "decode_tps": 67.72
+        },
+        {
+          "t": 1792382702.1,
+          "decode_tps": 68.59
+        },
+        {
+          "t": 1792382705.6,
+          "decode_tps": 68.0
+        },
+        {
+          "t": 1792382708.8,
+          "decode_tps": 67.87
+        },
+        {
+          "t": 1792382712.0,
+          "decode_tps": 67.94
+        },
+        {
+          "t": 1792382715.1,
+          "decode_tps": 68.46
+        },
+        {
+          "t": 1792382718.7,
+          "decode_tps": 67.61
+        },
+        {
+          "t": 1792382721.1,
+          "decode_tps": 92.98
+        },
+        {
+          "t": 1792382724.3,
+          "decode_tps": 68.59
+        },
+        {
+          "t": 1792382727.9,
+          "decode_tps": 67.61
+        },
+        {
+          "t": 1792382731.1,
+          "decode_tps": 67.77
+        },
+        {
+          "t": 1792382734.6,
+          "decode_tps": 67.84
+        },
+        {
+          "t": 1792382738.1,
+          "decode_tps": 67.55
+        },
+        {
+          "t": 1792382741.4,
+          "decode_tps": 67.51
+        },
+        {
+          "t": 1792382744.6,
+          "decode_tps": 67.72
+        },
+        {
+          "t": 1792382747.7,
+          "decode_tps": 68.46
+        },
+        {
+          "t": 1792382751.3,
+          "decode_tps": 67.72
+        },
+        {
+          "t": 1792382754.9,
+          "decode_tps": 67.44
+        },
+        {
+          "t": 1792382758.1,
+          "decode_tps": 67.73
+        },
+        {
+          "t": 1792382761.3,
+          "decode_tps": 68.83
+        },
+        {
+          "t": 1792382764.3,
+          "decode_tps": 77.66
+        },
+        {
+          "t": 1792382767.3,
+          "decode_tps": 72.66
+        },
+        {
+          "t": 1792382770.1,
+          "decode_tps": 75.56
+        },
+        {
+          "t": 1792382773.2,
+          "decode_tps": 71.19
+        },
+        {
+          "t": 1792382776.2,
+          "decode_tps": 76.9
+        },
+        {
+          "t": 1792382779.2,
+          "decode_tps": 74.73
+        },
+        {
+          "t": 1792382782.1,
+          "decode_tps": 76.53
+        },
+        {
+          "t": 1792382784.9,
+          "decode_tps": 74.73
+        },
+        {
+          "t": 1792382788.2,
+          "decode_tps": 77.71
+        },
+        {
+          "t": 1792382791.7,
+          "decode_tps": 74.13
+        },
+        {
+          "t": 1792382794.6,
+          "decode_tps": 74.73
+        },
+        {
+          "t": 1792382797.4,
+          "decode_tps": 77.94
+        },
+        {
+          "t": 1792382800.1,
+          "decode_tps": 78.95
+        },
+        {
+          "t": 1792382803.0,
+          "decode_tps": 73.38
+        },
+        {
+          "t": 1792382805.9,
+          "decode_tps": 75.71
+        },
+        {
+          "t": 1792382808.7,
+          "decode_tps": 77.21
+        },
+        {
+          "t": 1792382812.3,
+          "decode_tps": 71.43
+        },
+        {
+          "t": 1792382815.3,
+          "decode_tps": 71.38
+        },
+        {
+          "t": 1792382818.5,
+          "decode_tps": 69.08
+        },
+        {
+          "t": 1792382821.8,
+          "decode_tps": 66.46
+        },
+        {
+          "t": 1792382825.3,
+          "decode_tps": 71.35
+        },
+        {
+          "t": 1792382828.2,
+          "decode_tps": 75.0
+        },
+        {
+          "t": 1792382831.6,
+          "decode_tps": 71.82
+        },
+        {
+          "t": 1792382834.8,
+          "decode_tps": 69.77
+        },
+        {
+          "t": 1792382837.9,
+          "decode_tps": 67.65
+        },
+        {
+          "t": 1792382841.0,
+          "decode_tps": 72.79
+        },
+        {
+          "t": 1792382844.2,
+          "decode_tps": 77.04
+        },
+        {
+          "t": 1792382847.0,
+          "decode_tps": 76.89
+        },
+        {
+          "t": 1792382850.5,
+          "decode_tps": 75.44
+        },
+        {
+          "t": 1792382853.2,
+          "decode_tps": 79.38
+        },
+        {
+          "t": 1792382856.5,
+          "decode_tps": 78.95
+        },
+        {
+          "t": 1792382859.3,
+          "decode_tps": 76.12
+        },
+        {
+          "t": 1792382862.6,
+          "decode_tps": 70.44
+        },
+        {
+          "t": 1792382865.4,
+          "decode_tps": 79.85
+        }
+      ],
+      "first_3_avg_tps": 68.08,
+      "last_3_avg_tps": 75.47
+    },
+    "context": {
+      "15.5k": {
+        "ttft_s": 30.72,
+        "total_s": 41.41,
+        "completion_tokens": 64,
+        "thinking_chars": 0,
+        "tool_calls": false,
+        "reply_start": "The text repeats the same paragraph 146 times, describing the early days of personal computing, where hobbyists built ma"
+      },
+      "17.5k": {
+        "ttft_s": 14.34,
+        "total_s": 25.28,
+        "completion_tokens": 64,
+        "thinking_chars": 0,
+        "tool_calls": false,
+        "reply_start": "The text describes the evolution of personal computing from its early days, where hobbyists built machines from kits, us"
+      }
+    }
+  }
+}

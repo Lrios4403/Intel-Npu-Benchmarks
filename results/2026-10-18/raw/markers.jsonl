@@ -2,3 +2,20 @@
 {"t": 1792379358.2334688, "label": "npu:startup"}
 {"t": 1792379381.4045033, "label": "npu:idle (server loaded)"}
 {"t": 1792379561.405753, "label": "npu:thinking"}
+{"t": 1792380201.6670883, "label": "npu:parallel"}
+{"t": 1792380312.8302112, "label": "npu:sustained"}
+{"t": 1792380798.1705527, "label": "npu:context"}
+{"t": 1792381004.5716894, "label": "npu:stopped"}
+{"t": 1792381034.5731468, "label": "igpu:startup"}
+{"t": 1792381049.7629957, "label": "igpu:idle (server loaded)"}
+{"t": 1792381229.7648873, "label": "igpu:thinking"}
+{"t": 1792381798.1104207, "label": "igpu:parallel"}
+{"t": 1792381885.4530532, "label": "igpu:sustained"}
+{"t": 1792382392.2065322, "label": "igpu:stopped"}
+{"t": 1792382422.207466, "label": "rtx:startup"}
+{"t": 1792382430.4487278, "label": "rtx:idle (model loaded)"}
+{"t": 1792382550.4499338, "label": "rtx:thinking"}
+{"t": 1792382614.5510976, "label": "rtx:parallel"}
+{"t": 1792382624.9509196, "label": "rtx:sustained"}
+{"t": 1792382865.415766, "label": "rtx:context"}
+{"t": 1792382932.2908053, "label": "done"}
