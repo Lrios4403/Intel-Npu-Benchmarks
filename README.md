@@ -101,3 +101,7 @@ powershell -ExecutionPolicy Bypass -File bench/monitor.ps1 -Out runs/latest/moni
 - The RTX numbers use Ollama's Q4_K_M build of the same model (llama.cpp), not OpenVINO, so they're indicative.
 - The NPU's int4 `cw` export and the RTX's Q4_K_M build are different quantizations.
 - GPU and NPU engine counters in Windows occasionally spike past 100%, so the summaries use medians.
+
+## License
+
+[MIT](LICENSE). The result data and reports are covered by the same license.
