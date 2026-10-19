@@ -1,0 +1,177 @@
+{
+  "label": "qwen8-article",
+  "cold": {
+    "label": "qwen8-article",
+    "model": "OpenVINO\\Qwen3-8B-int4-cw-ov",
+    "device": "NPU",
+    "config": {
+      "MAX_PROMPT_LEN": 1024,
+      "MIN_RESPONSE_LEN": 1,
+      "CACHE_DIR": "<scratch>\\genai\\cache\\qwen8-article"
+    },
+    "warm": false,
+    "openvino_genai": "2026.4.1.0-3408-ab01d1771e4",
+    "load_s": 110.0,
+    "runs": [
+      {
+        "size": "short",
+        "input_tokens": 56,
+        "output_tokens": 222,
+        "ttft_s": 6.009,
+        "tpot_ms": 107.2,
+        "decode_tps": 9.33,
+        "throughput_tps": 9.33,
+        "wall_s": 29.78,
+        "prefill_tps": 9.3,
+        "text": "<think>\n\n</think>\n\nA CPU cache is a small, fast memory located close to the CPU that stores frequently accessed data to reduce access time. It operates on the principle of locality, which includes temporal and spatial locality. Temporal locality refers to the tendency of a program to reuse data that has been recently accessed, while spatial locality refers to the tendency to access data that is located near recently accessed data. \n\nCaches are organized in levels, typically L1, L2, and L3, with each level being larger but slower than the previous. The L1 cache is the fastest and smallest, loca"
+      },
+      {
+        "size": "short",
+        "input_tokens": 56,
+        "output_tokens": 229,
+        "ttft_s": 4.357,
+        "tpot_ms": 102.3,
+        "decode_tps": 9.77,
+        "throughput_tps": 9.77,
+        "wall_s": 27.69,
+        "prefill_tps": 12.9
+      },
+      {
+        "size": "short",
+        "input_tokens": 56,
+        "output_tokens": 202,
+        "ttft_s": 4.332,
+        "tpot_ms": 101.1,
+        "decode_tps": 9.9,
+        "throughput_tps": 9.9,
+        "wall_s": 24.66,
+        "prefill_tps": 12.9
+      },
+      {
+        "size": "medium",
+        "input_tokens": 765,
+        "output_tokens": 213,
+        "ttft_s": 4.37,
+        "tpot_ms": 102.6,
+        "decode_tps": 9.75,
+        "throughput_tps": 9.75,
+        "wall_s": 26.14,
+        "prefill_tps": 175.1,
+        "text": "<think>\n\n</think>\n\nThe text provides a repetitive account of the evolution of personal computing, highlighting key developments from the early days to more modern times. It begins with a description of the early computing era, where hobbyists built machines from kits, programmed in BASIC, and shared software via cassette tapes and floppy disks. Due to limited memory and storage, programmers had to be highly efficient, often using tight loops and lookup tables to maximize performance. As technology advanced, processors evolved with features like caches, pipelines, and multiple cores, while dedi"
+      },
+      {
+        "size": "medium",
+        "input_tokens": 765,
+        "output_tokens": 208,
+        "ttft_s": 4.339,
+        "tpot_ms": 101.9,
+        "decode_tps": 9.81,
+        "throughput_tps": 9.81,
+        "wall_s": 25.52,
+        "prefill_tps": 176.3
+      },
+      {
+        "size": "medium",
+        "input_tokens": 765,
+        "output_tokens": 208,
+        "ttft_s": 4.332,
+        "tpot_ms": 101.7,
+        "decode_tps": 9.83,
+        "throughput_tps": 9.83,
+        "wall_s": 25.39,
+        "prefill_tps": 176.6
+      },
+      {
+        "size": "long",
+        "error": "Check 'data->input_ids.get_size() <= m_max_prompt_len' failed at C:\\Jenkins\\workspace\\private-ci\\ie\\build-windows-vs2022\\b\\repos\\openvino.genai\\src\\cpp\\src\\llm\\pipeline_stateful.cpp:364:\nStateful LLM pipeline on NPU may only process prompts or hold chat history up to 1024 tokens. 3619 is passed.\n Set the \"MAX_PROMPT_LEN\" config option to increase the limit.\n",
+        "wall_s": 0.0
+      }
+    ],
+    "memory": {
+      "peak_working_set_gb": 0.0,
+      "peak_private_gb": 0.0
+    }
+  },
+  "warm": {
+    "label": "qwen8-article",
+    "model": "OpenVINO\\Qwen3-8B-int4-cw-ov",
+    "device": "NPU",
+    "config": {
+      "MAX_PROMPT_LEN": 1024,
+      "MIN_RESPONSE_LEN": 1,
+      "CACHE_DIR": "<scratch>\\genai\\cache\\qwen8-article"
+    },
+    "warm": true,
+    "openvino_genai": "2026.4.1.0-3408-ab01d1771e4",
+    "load_s": 21.3,
+    "runs": [
+      {
+        "size": "short",
+        "input_tokens": 56,
+        "output_tokens": 222,
+        "ttft_s": 5.37,
+        "tpot_ms": 107.7,
+        "decode_tps": 9.28,
+        "throughput_tps": 9.28,
+        "wall_s": 29.23,
+        "prefill_tps": 10.4,
+        "text": "<think>\n\n</think>\n\nA CPU cache is a small, fast memory located close to the CPU that stores frequently accessed data to reduce access time. It operates on the principle of locality, which includes temporal and spatial locality. Temporal locality refers to the tendency of a program to reuse data that has been recently accessed, while spatial locality refers to the tendency to access data that is located near recently accessed data. \n\nCaches are organized in levels, typically L1, L2, and L3, with each level being larger but slower than the previous. The L1 cache is the fastest and smallest, loca"
+      },
+      {
+        "size": "medium",
+        "input_tokens": 765,
+        "output_tokens": 213,
+        "ttft_s": 4.329,
+        "tpot_ms": 103.3,
+        "decode_tps": 9.68,
+        "throughput_tps": 9.68,
+        "wall_s": 26.23,
+        "prefill_tps": 176.7,
+        "text": "<think>\n\n</think>\n\nThe text provides a repetitive account of the evolution of personal computing, highlighting key developments from the early days to more modern times. It begins with a description of the early computing era, where hobbyists built machines from kits, programmed in BASIC, and shared software via cassette tapes and floppy disks. Due to limited memory and storage, programmers had to be highly efficient, often using tight loops and lookup tables to maximize performance. As technology advanced, processors evolved with features like caches, pipelines, and multiple cores, while dedi"
+      },
+      {
+        "size": "long",
+        "error": "Check 'data->input_ids.get_size() <= m_max_prompt_len' failed at C:\\Jenkins\\workspace\\private-ci\\ie\\build-windows-vs2022\\b\\repos\\openvino.genai\\src\\cpp\\src\\llm\\pipeline_stateful.cpp:364:\nStateful LLM pipeline on NPU may only process prompts or hold chat history up to 1024 tokens. 3619 is passed.\n Set the \"MAX_PROMPT_LEN\" config option to increase the limit.\n",
+        "wall_s": 0.0
+      }
+    ],
+    "memory": {
+      "peak_working_set_gb": 0.0,
+      "peak_private_gb": 0.0
+    }
+  },
+  "summary": {
+    "model": "OpenVINO\\Qwen3-8B-int4-cw-ov",
+    "config": {
+      "MAX_PROMPT_LEN": 1024,
+      "MIN_RESPONSE_LEN": 1
+    },
+    "cold_load_s": 110.0,
+    "warm_load_s": 21.3,
+    "cache_mb": 618,
+    "memory": {
+      "peak_working_set_gb": 0.0,
+      "peak_private_gb": 0.0
+    },
+    "load_error": null,
+    "per_size": {
+      "short": {
+        "input_tokens": 56,
+        "output_tokens": 222,
+        "ttft_s": 4.357,
+        "decode_tps": 9.77,
+        "prefill_tps": 12.9
+      },
+      "medium": {
+        "input_tokens": 765,
+        "output_tokens": 208,
+        "ttft_s": 4.339,
+        "decode_tps": 9.81,
+        "prefill_tps": 176.3
+      },
+      "long": {
+        "error": "Check 'data->input_ids.get_size() <= m_max_prompt_len' failed at C:\\Jenkins\\workspace\\private-ci\\ie\\build-windows-vs2022\\b\\repos\\openvino.genai\\src\\cpp\\src\\llm\\pipeline_stateful.cpp:364:\nStateful LLM pipeline on NPU may only process prompts or hold chat history up to 1024 tokens. 3619 is passed.\n Set the \"MAX_PROMPT_LEN\" config option to increase the limit.\n"
+      }
+    }
+  }
+}

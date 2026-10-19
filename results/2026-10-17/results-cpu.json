@@ -1,0 +1,211 @@
+{
+  "label": "cpu",
+  "backend": "OVMS 2026.4.0",
+  "device": "CPU",
+  "model": "OpenVINO/Qwen3-8B-int4-cw-ov",
+  "command": "%USERPROFILE%\\Downloads\\ovms_windows_2026.4.0_python_off\\ovms\\ovms.exe --rest_port 8000 --rest_bind_address 127.0.0.1 --model_repository_path %USERPROFILE%\\Downloads\\models --source_model OpenVINO/Qwen3-8B-int4-cw-ov --model_name Qwen3-8B --task text_generation --target_device CPU --tool_parser hermes3",
+  "startup_s": 3.2,
+  "endpoints": {
+    "GET /v1/models": 200,
+    "GET /v3/models": 200,
+    "GET /v3/v1/models": 200,
+    "POST /v1/chat/completions": 200,
+    "POST /v3/chat/completions": 200,
+    "POST /v3/v1/chat/completions": 200
+  },
+  "chat_path": "/v3/chat/completions",
+  "tool_call": {
+    "pass": true,
+    "name": "get_weather",
+    "arguments": {
+      "city": "Phoenix"
+    }
+  },
+  "memory": {
+    "peak_working_set_gb": 8.45,
+    "peak_private_gb": 5.1
+  },
+  "cold_first": {
+    "prompt_tokens": 32,
+    "completion_tokens": 256,
+    "chunks": 247,
+    "ttft_s": 0.711,
+    "decode_tps": 9.46,
+    "prefill_tps": 45.0,
+    "total_s": 27.677
+  },
+  "sample_response": "\n\n\n\nA CPU cache is a small, fast memory located close to the CPU that stores frequently accessed data to reduce the time required to access it from main memory. It operates on the principle that \"locality of reference,\" meaning programs often reuse data or instructions from the same location. Caches are organized in levels: L1 (fastest, smallest), L2, and L3, with each subsequent level being larger but slower. \n\nWhen the CPU needs data, it first checks the L1 cache. If the data is not there, it checks the next level, and so on, until the data is found or the main memory is accessed. This hierarchy ensures that the most frequently used data is accessed quickly, improving overall system performance. \n\nCaches use a mapping technique, such as direct-mapped or set-associative, to determine where data is stored. They also use replacement policies, like Least Recently Used (LRU), to manage space. By reducing the need to access slower main memory, the CPU can execute instructions more efficiently, significantly improving application performance.",
+  "runs": [
+    {
+      "prompt_tokens": 52,
+      "completion_tokens": 220,
+      "chunks": 212,
+      "ttft_s": 0.999,
+      "decode_tps": 9.72,
+      "prefill_tps": 52.1,
+      "total_s": 23.528,
+      "size": "short"
+    },
+    {
+      "prompt_tokens": 52,
+      "completion_tokens": 212,
+      "chunks": 204,
+      "ttft_s": 0.885,
+      "decode_tps": 10.04,
+      "prefill_tps": 58.8,
+      "total_s": 21.891,
+      "size": "short"
+    },
+    {
+      "prompt_tokens": 52,
+      "completion_tokens": 206,
+      "chunks": 198,
+      "ttft_s": 1.002,
+      "decode_tps": 9.93,
+      "prefill_tps": 51.9,
+      "total_s": 21.639,
+      "size": "short"
+    },
+    {
+      "prompt_tokens": 1167,
+      "completion_tokens": 240,
+      "chunks": 232,
+      "ttft_s": 21.142,
+      "decode_tps": 9.05,
+      "prefill_tps": 55.2,
+      "total_s": 47.553,
+      "size": "medium"
+    },
+    {
+      "prompt_tokens": 1167,
+      "completion_tokens": 215,
+      "chunks": 209,
+      "ttft_s": 18.898,
+      "decode_tps": 8.81,
+      "prefill_tps": 61.8,
+      "total_s": 43.18,
+      "size": "medium"
+    },
+    {
+      "prompt_tokens": 1167,
+      "completion_tokens": 240,
+      "chunks": 236,
+      "ttft_s": 21.553,
+      "decode_tps": 8.7,
+      "prefill_tps": 54.1,
+      "total_s": 49.038,
+      "size": "medium"
+    },
+    {
+      "prompt_tokens": 4329,
+      "completion_tokens": 230,
+      "chunks": 222,
+      "ttft_s": 88.29,
+      "decode_tps": 6.71,
+      "prefill_tps": 49.0,
+      "total_s": 122.402,
+      "size": "long"
+    },
+    {
+      "prompt_tokens": 4329,
+      "completion_tokens": 225,
+      "chunks": 217,
+      "ttft_s": 87.813,
+      "decode_tps": 6.7,
+      "prefill_tps": 49.3,
+      "total_s": 121.262,
+      "size": "long"
+    },
+    {
+      "prompt_tokens": 4329,
+      "completion_tokens": 221,
+      "chunks": 217,
+      "ttft_s": 86.649,
+      "decode_tps": 6.76,
+      "prefill_tps": 50.0,
+      "total_s": 119.205,
+      "size": "long"
+    }
+  ],
+  "median": {
+    "short": {
+      "prompt_tokens": 52,
+      "completion_tokens": 212,
+      "ttft_s": 0.999,
+      "prefill_tps": 52.1,
+      "decode_tps": 9.93
+    },
+    "medium": {
+      "prompt_tokens": 1167,
+      "completion_tokens": 240,
+      "ttft_s": 21.142,
+      "prefill_tps": 55.2,
+      "decode_tps": 8.81
+    },
+    "long": {
+      "prompt_tokens": 4329,
+      "completion_tokens": 225,
+      "ttft_s": 87.813,
+      "prefill_tps": 49.3,
+      "decode_tps": 6.71
+    }
+  },
+  "power_and_util": {
+    "idle": {
+      "package_w": 38.9,
+      "cores_w": 26.7,
+      "igpu_w": 0.5,
+      "cpu_util_pct": 24.6,
+      "samples": 11
+    },
+    "startup": {
+      "package_w": 40.6,
+      "cores_w": 28.6,
+      "igpu_w": 0.5,
+      "cpu_util_pct": 24.7,
+      "samples": 3
+    },
+    "cold_first": {
+      "package_w": 71.5,
+      "cores_w": 57.2,
+      "igpu_w": 0.5,
+      "cpu_util_pct": 56.9,
+      "samples": 27
+    },
+    "short": {
+      "package_w": 54.4,
+      "cores_w": 40.5,
+      "igpu_w": 0.3,
+      "cpu_util_pct": 50.5,
+      "samples": 65
+    },
+    "medium": {
+      "package_w": 60.6,
+      "cores_w": 47.7,
+      "igpu_w": 0.4,
+      "cpu_util_pct": 45.0,
+      "samples": 135
+    },
+    "long": {
+      "package_w": 64.8,
+      "cores_w": 52.4,
+      "igpu_w": 0.3,
+      "cpu_util_pct": 43.8,
+      "samples": 350
+    },
+    "all_runs": {
+      "package_w": 62.5,
+      "cores_w": 49.8,
+      "igpu_w": 0.3,
+      "cpu_util_pct": 44.9,
+      "samples": 550
+    },
+    "tool_call": {
+      "package_w": 62.2,
+      "cores_w": 49.2,
+      "igpu_w": 0.6,
+      "cpu_util_pct": 43.6,
+      "samples": 6
+    }
+  }
+}

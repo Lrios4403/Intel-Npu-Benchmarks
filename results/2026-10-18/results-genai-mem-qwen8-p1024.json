@@ -1,0 +1,111 @@
+{
+  "label": "mem-qwen8-p1024",
+  "cold": {
+    "label": "mem-qwen8-p1024",
+    "model": "OpenVINO\\Qwen3-8B-int4-cw-ov",
+    "device": "NPU",
+    "config": {
+      "MAX_PROMPT_LEN": 1024,
+      "MIN_RESPONSE_LEN": 256,
+      "CACHE_DIR": "<scratch>\\genai\\cache\\mem-qwen8-p1024"
+    },
+    "warm": false,
+    "openvino_genai": "2026.4.1.0-3408-ab01d1771e4",
+    "load_s": 32.8,
+    "runs": [
+      {
+        "size": "short",
+        "input_tokens": 61,
+        "output_tokens": 233,
+        "ttft_s": 5.621,
+        "tpot_ms": 98.7,
+        "decode_tps": 10.13,
+        "throughput_tps": 10.13,
+        "wall_s": 28.57,
+        "prefill_tps": 10.9,
+        "text": "<think>\n\n</think>\n\nA CPU cache is a small, fast memory located close to the CPU, used to store frequently accessed data from main memory, reducing the time needed to access it. It operates on the principle of locality, which includes temporal and spatial locality. Temporal locality refers to the tendency of a program to reuse data that has been recently accessed, while spatial locality refers to the tendency to access data that is located near recently accessed data. Caches are organized in a hierarchy: L1 (fastest, smallest), L2, and L3 (slower, larger), with the CPU using the fastest cache f"
+      },
+      {
+        "size": "short",
+        "input_tokens": 61,
+        "output_tokens": 233,
+        "ttft_s": 4.345,
+        "tpot_ms": 98.2,
+        "decode_tps": 10.18,
+        "throughput_tps": 10.18,
+        "wall_s": 27.14,
+        "prefill_tps": 14.0
+      },
+      {
+        "size": "short",
+        "input_tokens": 61,
+        "output_tokens": 233,
+        "ttft_s": 4.327,
+        "tpot_ms": 98.3,
+        "decode_tps": 10.17,
+        "throughput_tps": 10.17,
+        "wall_s": 27.14,
+        "prefill_tps": 14.1
+      }
+    ],
+    "memory": {
+      "peak_working_set_gb": 7.78,
+      "peak_private_gb": 3.63
+    }
+  },
+  "warm": {
+    "label": "mem-qwen8-p1024",
+    "model": "OpenVINO\\Qwen3-8B-int4-cw-ov",
+    "device": "NPU",
+    "config": {
+      "MAX_PROMPT_LEN": 1024,
+      "MIN_RESPONSE_LEN": 256,
+      "CACHE_DIR": "<scratch>\\genai\\cache\\mem-qwen8-p1024"
+    },
+    "warm": true,
+    "openvino_genai": "2026.4.1.0-3408-ab01d1771e4",
+    "load_s": 22.9,
+    "runs": [
+      {
+        "size": "short",
+        "input_tokens": 61,
+        "output_tokens": 233,
+        "ttft_s": 5.568,
+        "tpot_ms": 99.3,
+        "decode_tps": 10.07,
+        "throughput_tps": 10.07,
+        "wall_s": 28.66,
+        "prefill_tps": 11.0,
+        "text": "<think>\n\n</think>\n\nA CPU cache is a small, fast memory located close to the CPU, used to store frequently accessed data from main memory, reducing the time needed to access it. It operates on the principle of locality, which includes temporal and spatial locality. Temporal locality refers to the tendency of a program to reuse data that has been recently accessed, while spatial locality refers to the tendency to access data that is located near recently accessed data. Caches are organized in a hierarchy: L1 (fastest, smallest), L2, and L3 (slower, larger), with the CPU using the fastest cache f"
+      }
+    ],
+    "memory": {
+      "peak_working_set_gb": 7.24,
+      "peak_private_gb": 3.2
+    }
+  },
+  "summary": {
+    "model": "OpenVINO\\Qwen3-8B-int4-cw-ov",
+    "config": {
+      "MAX_PROMPT_LEN": 1024,
+      "MIN_RESPONSE_LEN": 256
+    },
+    "cold_load_s": 32.8,
+    "warm_load_s": 22.9,
+    "cache_mb": 619,
+    "memory": {
+      "peak_working_set_gb": 7.78,
+      "peak_private_gb": 3.63
+    },
+    "load_error": null,
+    "per_size": {
+      "short": {
+        "input_tokens": 61,
+        "output_tokens": 233,
+        "ttft_s": 4.345,
+        "decode_tps": 10.17,
+        "prefill_tps": 14.0
+      }
+    }
+  }
+}

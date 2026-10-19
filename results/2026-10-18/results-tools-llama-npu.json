@@ -1,0 +1,287 @@
+{
+  "label": "llama-npu",
+  "passed": 11,
+  "total": 20,
+  "median_seconds": 7.9,
+  "cases": [
+    {
+      "case": "weather simple",
+      "pass": true,
+      "seconds": 9.2,
+      "calls": [
+        {
+          "name": "get_weather",
+          "args": {
+            "city": "Phoenix",
+            "unit": "fahrenheit"
+          }
+        }
+      ],
+      "content": ""
+    },
+    {
+      "case": "weather with unit",
+      "pass": true,
+      "seconds": 7.1,
+      "calls": [
+        {
+          "name": "get_weather",
+          "args": {
+            "city": "Paris",
+            "unit": "celsius"
+          }
+        }
+      ],
+      "content": ""
+    },
+    {
+      "case": "time",
+      "pass": false,
+      "seconds": 8.0,
+      "calls": [
+        {
+          "name": "get_time",
+          "args": {}
+        }
+      ],
+      "content": ""
+    },
+    {
+      "case": "currency",
+      "pass": true,
+      "seconds": 7.8,
+      "calls": [
+        {
+          "name": "convert_currency",
+          "args": {
+            "amount": 250,
+            "from_currency": "USD",
+            "to_currency": "EUR"
+          }
+        }
+      ],
+      "content": ""
+    },
+    {
+      "case": "currency paraphrase",
+      "pass": true,
+      "seconds": 7.9,
+      "calls": [
+        {
+          "name": "convert_currency",
+          "args": {
+            "amount": 40,
+            "from_currency": "GBP",
+            "to_currency": "JPY"
+          }
+        }
+      ],
+      "content": ""
+    },
+    {
+      "case": "thermostat heat",
+      "pass": true,
+      "seconds": 7.2,
+      "calls": [
+        {
+          "name": "set_thermostat",
+          "args": {
+            "mode": "heat",
+            "temperature": "70"
+          }
+        }
+      ],
+      "content": ""
+    },
+    {
+      "case": "thermostat cool",
+      "pass": true,
+      "seconds": 7.2,
+      "calls": [
+        {
+          "name": "set_thermostat",
+          "args": {
+            "mode": "cool",
+            "temperature": "68"
+          }
+        }
+      ],
+      "content": ""
+    },
+    {
+      "case": "event with list",
+      "pass": true,
+      "seconds": 8.7,
+      "calls": [
+        {
+          "name": "create_event",
+          "args": {
+            "title": "Sprint Review",
+            "date": "2026-10-20",
+            "attendees": [
+              "Ana",
+              "Ben"
+            ]
+          }
+        }
+      ],
+      "content": ""
+    },
+    {
+      "case": "search with int",
+      "pass": false,
+      "seconds": 8.6,
+      "calls": [
+        {
+          "name": "search_files",
+          "args": {}
+        }
+      ],
+      "content": ""
+    },
+    {
+      "case": "no tool: math",
+      "pass": false,
+      "seconds": 7.5,
+      "calls": [
+        {
+          "name": "calculate",
+          "args": {
+            "a": 17,
+            "b": 3,
+            "op": "multiply"
+          }
+        }
+      ],
+      "content": ""
+    },
+    {
+      "case": "no tool: haiku",
+      "pass": false,
+      "seconds": 9.8,
+      "calls": [
+        {
+          "name": "create_event",
+          "args": {}
+        }
+      ],
+      "content": ""
+    },
+    {
+      "case": "no tool: definition",
+      "pass": false,
+      "seconds": 8.1,
+      "calls": [
+        {
+          "name": "explain",
+          "args": {}
+        }
+      ],
+      "content": ""
+    },
+    {
+      "case": "two calls, same tool",
+      "pass": false,
+      "seconds": 12.5,
+      "calls": [
+        {
+          "name": "get_weather",
+          "args": {}
+        }
+      ],
+      "content": ""
+    },
+    {
+      "case": "two calls, two tools",
+      "pass": false,
+      "seconds": 11.6,
+      "calls": [
+        {
+          "name": "get_time",
+          "args": {}
+        }
+      ],
+      "content": ""
+    },
+    {
+      "case": "extract from sentence",
+      "pass": true,
+      "seconds": 7.2,
+      "calls": [
+        {
+          "name": "get_weather",
+          "args": {
+            "city": "Denver",
+            "unit": "celsius"
+          }
+        }
+      ],
+      "content": ""
+    },
+    {
+      "case": "unicode",
+      "pass": false,
+      "seconds": 9.0,
+      "calls": [
+        {
+          "name": "get_weather",
+          "args": {}
+        }
+      ],
+      "content": ""
+    },
+    {
+      "case": "optional arg omitted",
+      "pass": true,
+      "seconds": 7.1,
+      "calls": [
+        {
+          "name": "set_thermostat",
+          "args": {
+            "mode": "off",
+            "temperature": null
+          }
+        }
+      ],
+      "content": ""
+    },
+    {
+      "case": "number with comma",
+      "pass": true,
+      "seconds": 7.9,
+      "calls": [
+        {
+          "name": "convert_currency",
+          "args": {
+            "amount": 1000,
+            "from_currency": "CAD",
+            "to_currency": "USD"
+          }
+        }
+      ],
+      "content": ""
+    },
+    {
+      "case": "search phrase",
+      "pass": true,
+      "seconds": 7.3,
+      "calls": [
+        {
+          "name": "search_files",
+          "args": {
+            "query": "tax 2025",
+            "max_results": "3"
+          }
+        }
+      ],
+      "content": ""
+    },
+    {
+      "case": "use tool result",
+      "pass": false,
+      "seconds": 7.0,
+      "calls": [],
+      "content": "The function `get_weather` takes a city name as an argument and returns the current weather conditions for that city."
+    }
+  ]
+}

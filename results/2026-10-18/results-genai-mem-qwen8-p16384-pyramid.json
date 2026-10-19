@@ -1,0 +1,107 @@
+{
+  "label": "mem-qwen8-p16384-pyramid",
+  "cold": {
+    "label": "mem-qwen8-p16384-pyramid",
+    "model": "OpenVINO\\Qwen3-8B-int4-cw-ov",
+    "device": "NPU",
+    "config": {
+      "MAX_PROMPT_LEN": 16384,
+      "MIN_RESPONSE_LEN": 256,
+      "NPUW_LLM_PREFILL_ATTENTION_HINT": "PYRAMID",
+      "CACHE_DIR": "<scratch>\\genai\\cache\\mem-qwen8-p16384-pyramid"
+    },
+    "warm": false,
+    "openvino_genai": "2026.4.1.0-3408-ab01d1771e4",
+    "load_s": 69.2,
+    "runs": [
+      {
+        "size": "short",
+        "input_tokens": 65,
+        "output_tokens": 242,
+        "ttft_s": 8.122,
+        "tpot_ms": 100.3,
+        "decode_tps": 9.97,
+        "throughput_tps": 9.97,
+        "wall_s": 32.34,
+        "prefill_tps": 8.0,
+        "text": "<think>\n\n</think>\n\nA CPU cache is a small, fast memory located close to the CPU that stores frequently accessed data from main memory, reducing the time needed to access it. It operates on the principle of locality, which includes temporal and spatial locality. Temporal locality refers to the tendency of a program to reuse data that has been recently accessed, while spatial locality refers to the tendency to access data that is located near recently accessed data. \n\nCaches are organized in a hierarchy: L1 (smallest and fastest), L2, and L3 (larger and slower), with the CPU using the fastest ca"
+      },
+      {
+        "size": "short",
+        "input_tokens": 65,
+        "output_tokens": 242,
+        "ttft_s": 4.889,
+        "tpot_ms": 99.3,
+        "decode_tps": 10.07,
+        "throughput_tps": 10.07,
+        "wall_s": 28.82,
+        "prefill_tps": 13.3
+      },
+      {
+        "size": "short",
+        "input_tokens": 65,
+        "output_tokens": 242,
+        "ttft_s": 5.013,
+        "tpot_ms": 99.5,
+        "decode_tps": 10.05,
+        "throughput_tps": 10.05,
+        "wall_s": 29.0,
+        "prefill_tps": 13.0
+      }
+    ],
+    "memory": {
+      "peak_working_set_gb": 6.98,
+      "peak_private_gb": 11.3
+    }
+  },
+  "warm": {
+    "label": "mem-qwen8-p16384-pyramid",
+    "model": "OpenVINO\\Qwen3-8B-int4-cw-ov",
+    "device": "NPU",
+    "config": {
+      "MAX_PROMPT_LEN": 16384,
+      "MIN_RESPONSE_LEN": 256,
+      "NPUW_LLM_PREFILL_ATTENTION_HINT": "PYRAMID",
+      "CACHE_DIR": "<scratch>\\genai\\cache\\mem-qwen8-p16384-pyramid"
+    },
+    "warm": true,
+    "openvino_genai": "2026.4.1.0-3408-ab01d1771e4",
+    "load_s": 46.2,
+    "runs": [
+      {
+        "size": "short",
+        "error": "Exception from src\\inference\\src\\cpp\\infer_request.cpp:224:\nCheck 'foundPort.found()' failed at src\\plugins\\intel_npu\\src\\backend\\src\\zero_infer_request.cpp:413:\nCannot find tensor for port opset1::Parameter Parameter_243263[0]:f16[1,32,1024,128]\n\n",
+        "wall_s": 2.7
+      }
+    ],
+    "memory": {
+      "peak_working_set_gb": 11.83,
+      "peak_private_gb": 10.86
+    }
+  },
+  "summary": {
+    "model": "OpenVINO\\Qwen3-8B-int4-cw-ov",
+    "config": {
+      "MAX_PROMPT_LEN": 16384,
+      "MIN_RESPONSE_LEN": 256,
+      "NPUW_LLM_PREFILL_ATTENTION_HINT": "PYRAMID"
+    },
+    "cold_load_s": 69.2,
+    "warm_load_s": 46.2,
+    "cache_mb": 761,
+    "memory": {
+      "peak_working_set_gb": 6.98,
+      "peak_private_gb": 11.3
+    },
+    "load_error": null,
+    "per_size": {
+      "short": {
+        "input_tokens": 65,
+        "output_tokens": 242,
+        "ttft_s": 5.013,
+        "decode_tps": 10.05,
+        "prefill_tps": 13.0
+      }
+    }
+  }
+}

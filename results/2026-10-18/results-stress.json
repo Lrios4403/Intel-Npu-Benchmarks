@@ -1,0 +1,21 @@
+{
+  "stress_alone_mhs": [
+    7.143,
+    7.209
+  ],
+  "npu": {
+    "llm_alone_tps": 10.55,
+    "llm_under_stress_tps": 10.28,
+    "stress_mhs": 7.732
+  },
+  "cpu": {
+    "llm_alone_tps": 7.92,
+    "llm_under_stress_tps": 5.69,
+    "stress_mhs": 6.424
+  },
+  "igpu": {
+    "llm_alone_tps": 12.78,
+    "llm_under_stress_tps": 12.8,
+    "stress_mhs": 7.397
+  }
+}

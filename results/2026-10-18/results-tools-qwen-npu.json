@@ -1,0 +1,294 @@
+{
+  "label": "qwen-npu",
+  "passed": 20,
+  "total": 20,
+  "median_seconds": 8.0,
+  "cases": [
+    {
+      "case": "weather simple",
+      "pass": true,
+      "seconds": 11.2,
+      "calls": [
+        {
+          "name": "get_weather",
+          "args": {
+            "city": "Phoenix",
+            "unit": "celsius"
+          }
+        }
+      ],
+      "content": ""
+    },
+    {
+      "case": "weather with unit",
+      "pass": true,
+      "seconds": 8.0,
+      "calls": [
+        {
+          "name": "get_weather",
+          "args": {
+            "city": "Paris",
+            "unit": "celsius"
+          }
+        }
+      ],
+      "content": ""
+    },
+    {
+      "case": "time",
+      "pass": true,
+      "seconds": 7.2,
+      "calls": [
+        {
+          "name": "get_time",
+          "args": {
+            "timezone": "Asia/Tokyo"
+          }
+        }
+      ],
+      "content": ""
+    },
+    {
+      "case": "currency",
+      "pass": true,
+      "seconds": 8.5,
+      "calls": [
+        {
+          "name": "convert_currency",
+          "args": {
+            "amount": 250,
+            "from_currency": "USD",
+            "to_currency": "EUR"
+          }
+        }
+      ],
+      "content": ""
+    },
+    {
+      "case": "currency paraphrase",
+      "pass": true,
+      "seconds": 8.5,
+      "calls": [
+        {
+          "name": "convert_currency",
+          "args": {
+            "amount": 40,
+            "from_currency": "GBP",
+            "to_currency": "JPY"
+          }
+        }
+      ],
+      "content": ""
+    },
+    {
+      "case": "thermostat heat",
+      "pass": true,
+      "seconds": 7.8,
+      "calls": [
+        {
+          "name": "set_thermostat",
+          "args": {
+            "mode": "heat",
+            "temperature": 70
+          }
+        }
+      ],
+      "content": ""
+    },
+    {
+      "case": "thermostat cool",
+      "pass": true,
+      "seconds": 7.9,
+      "calls": [
+        {
+          "name": "set_thermostat",
+          "args": {
+            "mode": "cool",
+            "temperature": 68
+          }
+        }
+      ],
+      "content": ""
+    },
+    {
+      "case": "event with list",
+      "pass": true,
+      "seconds": 10.0,
+      "calls": [
+        {
+          "name": "create_event",
+          "args": {
+            "title": "Sprint Review",
+            "date": "2026-10-20",
+            "attendees": [
+              "Ana",
+              "Ben"
+            ]
+          }
+        }
+      ],
+      "content": ""
+    },
+    {
+      "case": "search with int",
+      "pass": true,
+      "seconds": 7.8,
+      "calls": [
+        {
+          "name": "search_files",
+          "args": {
+            "query": "invoice",
+            "max_results": 5
+          }
+        }
+      ],
+      "content": ""
+    },
+    {
+      "case": "no tool: math",
+      "pass": true,
+      "seconds": 7.0,
+      "calls": [],
+      "content": "\n\nThe result of 17 multiplied by 3 is 51."
+    },
+    {
+      "case": "no tool: haiku",
+      "pass": true,
+      "seconds": 7.2,
+      "calls": [],
+      "content": "\n\nAutumn leaves descend,  \nCrisp breeze whispers of change,  \nHarvest moon shines bright."
+    },
+    {
+      "case": "no tool: definition",
+      "pass": true,
+      "seconds": 8.5,
+      "calls": [],
+      "content": "\n\nAn NPU, or Neural Processing Unit, is a type of specialized hardware designed to efficiently perform the operations required by neural networks, particularly in machine learning and deep learning applications."
+    },
+    {
+      "case": "two calls, same tool",
+      "pass": true,
+      "seconds": 10.8,
+      "calls": [
+        {
+          "name": "get_weather",
+          "args": {
+            "city": "Phoenix",
+            "unit": "celsius"
+          }
+        },
+        {
+          "name": "get_weather",
+          "args": {
+            "city": "Seattle",
+            "unit": "celsius"
+          }
+        }
+      ],
+      "content": ""
+    },
+    {
+      "case": "two calls, two tools",
+      "pass": true,
+      "seconds": 9.9,
+      "calls": [
+        {
+          "name": "get_time",
+          "args": {
+            "timezone": "London"
+          }
+        },
+        {
+          "name": "get_weather",
+          "args": {
+            "city": "London",
+            "unit": "celsius"
+          }
+        }
+      ],
+      "content": ""
+    },
+    {
+      "case": "extract from sentence",
+      "pass": true,
+      "seconds": 7.7,
+      "calls": [
+        {
+          "name": "get_weather",
+          "args": {
+            "city": "Denver",
+            "unit": "celsius"
+          }
+        }
+      ],
+      "content": ""
+    },
+    {
+      "case": "unicode",
+      "pass": true,
+      "seconds": 7.9,
+      "calls": [
+        {
+          "name": "get_weather",
+          "args": {
+            "city": "S\u00e3o Paulo",
+            "unit": "celsius"
+          }
+        }
+      ],
+      "content": ""
+    },
+    {
+      "case": "optional arg omitted",
+      "pass": true,
+      "seconds": 7.6,
+      "calls": [
+        {
+          "name": "set_thermostat",
+          "args": {
+            "mode": "off"
+          }
+        }
+      ],
+      "content": ""
+    },
+    {
+      "case": "number with comma",
+      "pass": true,
+      "seconds": 8.6,
+      "calls": [
+        {
+          "name": "convert_currency",
+          "args": {
+            "amount": 1000,
+            "from_currency": "CAD",
+            "to_currency": "USD"
+          }
+        }
+      ],
+      "content": ""
+    },
+    {
+      "case": "search phrase",
+      "pass": true,
+      "seconds": 8.6,
+      "calls": [
+        {
+          "name": "search_files",
+          "args": {
+            "query": "tax 2025",
+            "max_results": 3
+          }
+        }
+      ],
+      "content": ""
+    },
+    {
+      "case": "use tool result",
+      "pass": true,
+      "seconds": 6.5,
+      "calls": [],
+      "content": "\n\nThe current weather in Phoenix is 98 degrees Fahrenheit and sunny."
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+# New runs (results, logs, NPU compile caches)
+runs/
+cache/
+graph-backups/
+
+__pycache__/
+*.pyc
+.venv/

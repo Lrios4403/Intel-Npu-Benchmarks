@@ -1,0 +1,231 @@
+{
+  "label": "qwen8-p16384",
+  "cold": {
+    "label": "qwen8-p16384",
+    "model": "OpenVINO\\Qwen3-8B-int4-cw-ov",
+    "device": "NPU",
+    "config": {
+      "MAX_PROMPT_LEN": 16384,
+      "MIN_RESPONSE_LEN": 256,
+      "CACHE_DIR": "<scratch>\\genai\\cache\\qwen8-p16384"
+    },
+    "warm": false,
+    "openvino_genai": "2026.4.1.0-3408-ab01d1771e4",
+    "load_s": 514.0,
+    "runs": [
+      {
+        "size": "short",
+        "input_tokens": 61,
+        "output_tokens": 239,
+        "ttft_s": 10.167,
+        "tpot_ms": 99.3,
+        "decode_tps": 10.07,
+        "throughput_tps": 10.07,
+        "wall_s": 33.85,
+        "prefill_tps": 6.0,
+        "text": "<think>\n\n</think>\n\nA CPU cache is a small, fast memory located close to the CPU that stores frequently accessed data to reduce access time. It operates on the principle of locality, which includes temporal and spatial locality. Temporal locality refers to the tendency of a program to reuse data recently accessed, while spatial locality refers to the tendency to access data located near recently accessed data. \n\nCaches are organized in levels: L1, L2, and L3, with each level being larger but slower than the previous. The L1 cache is the fastest and smallest, located on the CPU die, while L3 is "
+      },
+      {
+        "size": "short",
+        "input_tokens": 61,
+        "output_tokens": 239,
+        "ttft_s": 4.645,
+        "tpot_ms": 98.6,
+        "decode_tps": 10.14,
+        "throughput_tps": 10.14,
+        "wall_s": 28.12,
+        "prefill_tps": 13.1
+      },
+      {
+        "size": "short",
+        "input_tokens": 61,
+        "output_tokens": 229,
+        "ttft_s": 4.657,
+        "tpot_ms": 98.9,
+        "decode_tps": 10.11,
+        "throughput_tps": 10.11,
+        "wall_s": 27.22,
+        "prefill_tps": 13.1
+      },
+      {
+        "size": "medium",
+        "input_tokens": 770,
+        "output_tokens": 193,
+        "ttft_s": 4.73,
+        "tpot_ms": 98.6,
+        "decode_tps": 10.14,
+        "throughput_tps": 10.14,
+        "wall_s": 23.67,
+        "prefill_tps": 162.8,
+        "text": "<think>\n\n</think>\n\nThe text provides a repetitive account of the evolution of personal computing, highlighting key developments from the early days to more modern times. It begins with a description of the early computing era, where hobbyists built machines from kits, programmed in BASIC, and shared software via cassette tapes and floppy disks. Due to limited memory and storage, programmers had to be highly efficient, often using tight loops and lookup tables to maximize performance. As technology advanced, processors evolved with features like caches, pipelines, and multiple cores, while dedi"
+      },
+      {
+        "size": "medium",
+        "input_tokens": 770,
+        "output_tokens": 216,
+        "ttft_s": 4.706,
+        "tpot_ms": 98.8,
+        "decode_tps": 10.12,
+        "throughput_tps": 10.12,
+        "wall_s": 25.96,
+        "prefill_tps": 163.6
+      },
+      {
+        "size": "medium",
+        "input_tokens": 770,
+        "output_tokens": 213,
+        "ttft_s": 4.681,
+        "tpot_ms": 98.7,
+        "decode_tps": 10.13,
+        "throughput_tps": 10.13,
+        "wall_s": 25.61,
+        "prefill_tps": 164.5
+      },
+      {
+        "size": "long",
+        "input_tokens": 3624,
+        "output_tokens": 236,
+        "ttft_s": 22.772,
+        "tpot_ms": 120.9,
+        "decode_tps": 8.27,
+        "throughput_tps": 8.27,
+        "wall_s": 51.21,
+        "prefill_tps": 159.1,
+        "text": "<think>\n\n</think>\n\nThe text provides a repetitive and largely identical account of the early days of personal computing, emphasizing the technological and cultural context of the 1970s and 1980s. It describes how hobbyists assembled computers from kits, programmed in BASIC, and shared software via cassette tapes and floppy disks. At the time, computing resources were extremely limited\u2014memory was measured in kilobytes, storage was slow, and every byte counted. As a result, programmers developed efficient coding practices, such as using tight loops and lookup tables, to maximize performance.\n\nOv"
+      },
+      {
+        "size": "long",
+        "input_tokens": 3624,
+        "output_tokens": 237,
+        "ttft_s": 21.629,
+        "tpot_ms": 121.9,
+        "decode_tps": 8.2,
+        "throughput_tps": 8.2,
+        "wall_s": 50.41,
+        "prefill_tps": 167.6
+      },
+      {
+        "size": "long",
+        "input_tokens": 3624,
+        "output_tokens": 228,
+        "ttft_s": 21.889,
+        "tpot_ms": 123.1,
+        "decode_tps": 8.12,
+        "throughput_tps": 8.12,
+        "wall_s": 49.84,
+        "prefill_tps": 165.6
+      },
+      {
+        "size": "xl",
+        "input_tokens": 11491,
+        "output_tokens": 201,
+        "ttft_s": 130.559,
+        "tpot_ms": 168.9,
+        "decode_tps": 5.92,
+        "throughput_tps": 5.92,
+        "wall_s": 164.46,
+        "prefill_tps": 88.0,
+        "text": "<think>\n\n</think>\n\nThe text presents a repetitive and largely identical narrative across 112 sections, each describing the early days of personal computing. It begins with hobbyists assembling machines from kits, writing programs in BASIC, and trading software on cassette tapes and floppy disks. During this era, memory was measured in kilobytes, storage was slow, and every byte mattered, prompting programmers to optimize code using tight loops and lookup tables. As technology advanced, processors evolved with caches, pipelines, multiple cores, and dedicated accelerators, while operating system"
+      },
+      {
+        "size": "xl",
+        "input_tokens": 11491,
+        "output_tokens": 205,
+        "ttft_s": 171.123,
+        "tpot_ms": 174.6,
+        "decode_tps": 5.73,
+        "throughput_tps": 5.73,
+        "wall_s": 206.87,
+        "prefill_tps": 67.2
+      }
+    ],
+    "memory": {
+      "peak_working_set_gb": 0.0,
+      "peak_private_gb": 0.0
+    }
+  },
+  "warm": {
+    "label": "qwen8-p16384",
+    "model": "OpenVINO\\Qwen3-8B-int4-cw-ov",
+    "device": "NPU",
+    "config": {
+      "MAX_PROMPT_LEN": 16384,
+      "MIN_RESPONSE_LEN": 256,
+      "CACHE_DIR": "<scratch>\\genai\\cache\\qwen8-p16384"
+    },
+    "warm": true,
+    "openvino_genai": "2026.4.1.0-3408-ab01d1771e4",
+    "load_s": 40.2,
+    "runs": [
+      {
+        "size": "short",
+        "error": "Exception from src\\inference\\src\\cpp\\infer_request.cpp:224:\nCheck 'foundPort.found()' failed at src\\plugins\\intel_npu\\src\\backend\\src\\zero_infer_request.cpp:413:\nCannot find tensor for port opset1::Parameter Parameter_243263[0]:f16[1,32,1024,128]\n\n",
+        "wall_s": 1.9
+      },
+      {
+        "size": "medium",
+        "error": "Exception from src\\inference\\src\\cpp\\infer_request.cpp:224:\nCheck 'foundPort.found()' failed at src\\plugins\\intel_npu\\src\\backend\\src\\zero_infer_request.cpp:413:\nCannot find tensor for port opset1::Parameter Parameter_243263[0]:f16[1,32,1024,128]\n\n",
+        "wall_s": 0.3
+      },
+      {
+        "size": "long",
+        "error": "Exception from src\\inference\\src\\cpp\\infer_request.cpp:224:\nCheck 'foundPort.found()' failed at src\\plugins\\intel_npu\\src\\backend\\src\\zero_infer_request.cpp:413:\nCannot find tensor for port opset1::Parameter Parameter_243263[0]:f16[1,32,1024,128]\n\n",
+        "wall_s": 0.3
+      },
+      {
+        "size": "xl",
+        "error": "Exception from src\\inference\\src\\cpp\\infer_request.cpp:224:\nCheck 'foundPort.found()' failed at src\\plugins\\intel_npu\\src\\backend\\src\\zero_infer_request.cpp:413:\nCannot find tensor for port opset1::Parameter Parameter_243263[0]:f16[1,32,1024,128]\n\n",
+        "wall_s": 0.3
+      }
+    ],
+    "memory": {
+      "peak_working_set_gb": 0.0,
+      "peak_private_gb": 0.0
+    }
+  },
+  "summary": {
+    "model": "OpenVINO\\Qwen3-8B-int4-cw-ov",
+    "config": {
+      "MAX_PROMPT_LEN": 16384,
+      "MIN_RESPONSE_LEN": 256
+    },
+    "cold_load_s": 514.0,
+    "warm_load_s": 40.2,
+    "cache_mb": 761,
+    "memory": {
+      "peak_working_set_gb": 0.0,
+      "peak_private_gb": 0.0
+    },
+    "load_error": null,
+    "per_size": {
+      "short": {
+        "input_tokens": 61,
+        "output_tokens": 239,
+        "ttft_s": 4.657,
+        "decode_tps": 10.11,
+        "prefill_tps": 13.1
+      },
+      "medium": {
+        "input_tokens": 770,
+        "output_tokens": 213,
+        "ttft_s": 4.706,
+        "decode_tps": 10.13,
+        "prefill_tps": 163.6
+      },
+      "long": {
+        "input_tokens": 3624,
+        "output_tokens": 236,
+        "ttft_s": 21.889,
+        "decode_tps": 8.2,
+        "prefill_tps": 165.6
+      },
+      "xl": {
+        "input_tokens": 11491,
+        "output_tokens": 205,
+        "ttft_s": 171.123,
+        "decode_tps": 5.92,
+        "prefill_tps": 88.0
+      }
+    }
+  }
+}

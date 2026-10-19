@@ -1,0 +1,282 @@
+{
+  "label": "rtx",
+  "backend": "Ollama 0.40.5",
+  "device": "NVIDIA GeForce RTX 5080 Laptop GPU",
+  "model": "qwen3:8b (Q4_K_M, 8.2B)",
+  "num_ctx": 8192,
+  "startup_s": 39.3,
+  "model_load_s": 20.807,
+  "ollama_ps": "NAME        ID              SIZE     PROCESSOR    CONTEXT    RUNNER      UNTIL              \nqwen3:8b    500a1f067a9f    14 GB    100% GPU     8192       llamacpp    4 minutes from now",
+  "tool_call": {
+    "pass": true,
+    "name": "get_weather",
+    "arguments": {
+      "city": "Phoenix"
+    }
+  },
+  "memory": {
+    "13692": {
+      "peak_working_set_gb": 0.1,
+      "peak_private_gb": 0.08
+    }
+  },
+  "cold_first": {
+    "prompt_tokens": 40,
+    "completion_tokens": 256,
+    "chunks": 256,
+    "ttft_s": 0.1,
+    "decode_tps": 30.27,
+    "prefill_tps": 398.0,
+    "total_s": 8.527,
+    "server_decode_tps": 30.39,
+    "server_prefill_tps": 1412.6,
+    "server_load_s": 0.042
+  },
+  "sample_response": "A CPU cache is a small, high-speed memory located close to the CPU that stores frequently accessed data to reduce the time it takes to fetch information from slower main memory (RAM). The cache operates on the principle of locality\u2014data that is accessed repeatedly or in a predictable pattern is stored in the cache for faster access. \n\nCaches are organized in levels, typically L1, L2, and L3, with L1 being the smallest and fastest, and L3 being larger but slower. When the CPU needs data, it first checks the L1 cache. If the data is not there, it checks the next level, and so on, until it finds the data or reaches main memory. This hierarchical structure minimizes the average time to access data.\n\nCache entries are stored in blocks (or lines), each containing data and a tag that identifies its memory address. When data is read or written, the CPU checks the cache tags to determine if the data is present. If it is, the data is retrieved quickly (a cache hit); if not, the data is fetched from main memory and stored in the cache (a cache miss). This process significantly improves system performance by reducing the need to access slower memory.",
+  "runs": [
+    {
+      "prompt_tokens": 60,
+      "completion_tokens": 246,
+      "chunks": 245,
+      "ttft_s": 0.075,
+      "decode_tps": 103.23,
+      "prefill_tps": 805.2,
+      "total_s": 2.457,
+      "server_decode_tps": 103.26,
+      "server_prefill_tps": 2416.6,
+      "server_load_s": 0.021,
+      "size": "short"
+    },
+    {
+      "prompt_tokens": 60,
+      "completion_tokens": 250,
+      "chunks": 249,
+      "ttft_s": 0.106,
+      "decode_tps": 103.52,
+      "prefill_tps": 563.9,
+      "total_s": 2.522,
+      "server_decode_tps": 103.49,
+      "server_prefill_tps": 2522.3,
+      "server_load_s": 0.027,
+      "size": "short"
+    },
+    {
+      "prompt_tokens": 60,
+      "completion_tokens": 246,
+      "chunks": 245,
+      "ttft_s": 0.083,
+      "decode_tps": 103.28,
+      "prefill_tps": 719.8,
+      "total_s": 2.465,
+      "server_decode_tps": 103.29,
+      "server_prefill_tps": 2288.8,
+      "server_load_s": 0.016,
+      "size": "short"
+    },
+    {
+      "prompt_tokens": 1175,
+      "completion_tokens": 239,
+      "chunks": 238,
+      "ttft_s": 0.335,
+      "decode_tps": 98.68,
+      "prefill_tps": 3502.4,
+      "total_s": 2.758,
+      "server_decode_tps": 98.71,
+      "server_prefill_tps": 4502.3,
+      "server_load_s": 0.015,
+      "size": "medium"
+    },
+    {
+      "prompt_tokens": 1175,
+      "completion_tokens": 230,
+      "chunks": 229,
+      "ttft_s": 0.412,
+      "decode_tps": 97.83,
+      "prefill_tps": 2854.9,
+      "total_s": 2.763,
+      "server_decode_tps": 97.81,
+      "server_prefill_tps": 4830.1,
+      "server_load_s": 0.027,
+      "size": "medium"
+    },
+    {
+      "prompt_tokens": 1175,
+      "completion_tokens": 224,
+      "chunks": 223,
+      "ttft_s": 0.399,
+      "decode_tps": 98.01,
+      "prefill_tps": 2941.8,
+      "total_s": 2.686,
+      "server_decode_tps": 97.97,
+      "server_prefill_tps": 4594.0,
+      "server_load_s": 0.022,
+      "size": "medium"
+    },
+    {
+      "prompt_tokens": 4337,
+      "completion_tokens": 230,
+      "chunks": 229,
+      "ttft_s": 1.224,
+      "decode_tps": 86.42,
+      "prefill_tps": 3544.7,
+      "total_s": 3.885,
+      "server_decode_tps": 86.47,
+      "server_prefill_tps": 4179.2,
+      "server_load_s": 0.038,
+      "size": "long"
+    },
+    {
+      "prompt_tokens": 4337,
+      "completion_tokens": 234,
+      "chunks": 233,
+      "ttft_s": 1.472,
+      "decode_tps": 87.86,
+      "prefill_tps": 2947.1,
+      "total_s": 4.135,
+      "server_decode_tps": 87.84,
+      "server_prefill_tps": 3887.8,
+      "server_load_s": 0.036,
+      "size": "long"
+    },
+    {
+      "prompt_tokens": 4337,
+      "completion_tokens": 229,
+      "chunks": 228,
+      "ttft_s": 1.704,
+      "decode_tps": 86.85,
+      "prefill_tps": 2545.6,
+      "total_s": 4.34,
+      "server_decode_tps": 86.92,
+      "server_prefill_tps": 3845.4,
+      "server_load_s": 0.032,
+      "size": "long"
+    }
+  ],
+  "median": {
+    "short": {
+      "prompt_tokens": 60,
+      "completion_tokens": 246,
+      "ttft_s": 0.083,
+      "prefill_tps": 719.8,
+      "decode_tps": 103.28,
+      "server_prefill_tps": 2416.6,
+      "server_decode_tps": 103.29
+    },
+    "medium": {
+      "prompt_tokens": 1175,
+      "completion_tokens": 230,
+      "ttft_s": 0.399,
+      "prefill_tps": 2941.8,
+      "decode_tps": 98.01,
+      "server_prefill_tps": 4594.0,
+      "server_decode_tps": 97.97
+    },
+    "long": {
+      "prompt_tokens": 4337,
+      "completion_tokens": 230,
+      "ttft_s": 1.472,
+      "prefill_tps": 2947.1,
+      "decode_tps": 86.85,
+      "server_prefill_tps": 3887.8,
+      "server_decode_tps": 86.92
+    }
+  },
+  "power_and_util": {
+    "idle": {
+      "package_w": 28.4,
+      "cores_w": 17.4,
+      "igpu_w": 0.2,
+      "cpu_util_pct": 19.9,
+      "samples": 11,
+      "rtx": {
+        "power_w": 28.1,
+        "util_pct": 19.1,
+        "vram_used_gb": 1.53
+      }
+    },
+    "startup": {
+      "package_w": 44.2,
+      "cores_w": 33.4,
+      "igpu_w": 0.4,
+      "cpu_util_pct": 24.1,
+      "samples": 38,
+      "rtx": {
+        "power_w": 29.9,
+        "util_pct": 16.3,
+        "vram_used_gb": 15.12
+      }
+    },
+    "cold_first": {
+      "package_w": 45.2,
+      "cores_w": 35.3,
+      "igpu_w": 0.2,
+      "cpu_util_pct": 21.9,
+      "samples": 8,
+      "rtx": {
+        "power_w": 73.0,
+        "util_pct": 46.9,
+        "vram_used_gb": 15.12
+      }
+    },
+    "short": {
+      "package_w": 44.1,
+      "cores_w": 34.7,
+      "igpu_w": 0.3,
+      "cpu_util_pct": 22.4,
+      "samples": 8,
+      "rtx": {
+        "power_w": 152.4,
+        "util_pct": 93.6,
+        "vram_used_gb": 15.13
+      }
+    },
+    "medium": {
+      "package_w": 49.2,
+      "cores_w": 39.4,
+      "igpu_w": 0.5,
+      "cpu_util_pct": 24.6,
+      "samples": 8,
+      "rtx": {
+        "power_w": 152.2,
+        "util_pct": 90.6,
+        "vram_used_gb": 15.14
+      }
+    },
+    "long": {
+      "package_w": 45.8,
+      "cores_w": 35.8,
+      "igpu_w": 0.5,
+      "cpu_util_pct": 24.5,
+      "samples": 12,
+      "rtx": {
+        "power_w": 138.7,
+        "util_pct": 80.3,
+        "vram_used_gb": 15.14
+      }
+    },
+    "all_runs": {
+      "package_w": 46.3,
+      "cores_w": 36.5,
+      "igpu_w": 0.4,
+      "cpu_util_pct": 23.9,
+      "samples": 28,
+      "rtx": {
+        "power_w": 145.8,
+        "util_pct": 86.2,
+        "vram_used_gb": 15.14
+      }
+    },
+    "tool_call": {
+      "package_w": 51.1,
+      "cores_w": 39.7,
+      "igpu_w": 0.4,
+      "cpu_util_pct": 33.0,
+      "samples": 22,
+      "rtx": {
+        "power_w": 40.5,
+        "util_pct": 14.6,
+        "vram_used_gb": 14.79
+      }
+    }
+  }
+}

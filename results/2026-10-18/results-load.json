@@ -1,0 +1,36 @@
+{
+  "build_alone_s": [
+    15.4,
+    11.7
+  ],
+  "npu": {
+    "llm_alone_tps": 10.54,
+    "llm_during_build_tps": 10.29,
+    "build_s": [
+      15.0,
+      10.7
+    ]
+  },
+  "cpu": {
+    "llm_alone_tps": 7.99,
+    "llm_during_build_tps": 7.71,
+    "build_s": [
+      12.9,
+      16.2
+    ]
+  },
+  "igpu": {
+    "llm_alone_tps": 12.76,
+    "llm_during_build_tps": 12.35,
+    "build_s": [
+      14.0,
+      9.1
+    ]
+  },
+  "npu_plus_rtx": {
+    "npu_alone_tps": 10.56,
+    "npu_with_rtx_tps": 10.52,
+    "rtx_alone_tps": 89.31,
+    "rtx_with_npu_tps": 76.26
+  }
+}

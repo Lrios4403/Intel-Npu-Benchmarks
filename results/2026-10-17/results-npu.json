@@ -1,0 +1,247 @@
+{
+  "label": "npu",
+  "backend": "OVMS 2026.4.0",
+  "device": "NPU",
+  "model": "OpenVINO/Qwen3-8B-int4-cw-ov",
+  "command": "%USERPROFILE%\\Downloads\\ovms_windows_2026.4.0_python_off\\ovms\\ovms.exe --rest_port 8000 --rest_bind_address 127.0.0.1 --model_repository_path %USERPROFILE%\\Downloads\\models --source_model OpenVINO/Qwen3-8B-int4-cw-ov --model_name Qwen3-8B --task text_generation --target_device NPU --tool_parser hermes3 --max_prompt_len 16384 --plugin_config {\\\"NPUW_LLM_PREFILL_ATTENTION_HINT\\\":\\\"PYRAMID\\\"} --cache_dir .ovcache",
+  "startup_s": 30.7,
+  "endpoints": {
+    "GET /v1/models": 200,
+    "GET /v3/models": 200,
+    "GET /v3/v1/models": 200,
+    "POST /v1/chat/completions": 200,
+    "POST /v3/chat/completions": 200,
+    "POST /v3/v1/chat/completions": 200
+  },
+  "chat_path": "/v3/chat/completions",
+  "tool_call": {
+    "pass": true,
+    "name": "get_weather",
+    "arguments": {
+      "city": "Phoenix"
+    }
+  },
+  "memory": {
+    "peak_working_set_gb": 16.79,
+    "peak_private_gb": 11.24
+  },
+  "cold_first": {
+    "prompt_tokens": 32,
+    "completion_tokens": 234,
+    "chunks": 226,
+    "ttft_s": 4.969,
+    "decode_tps": 9.04,
+    "prefill_tps": 6.4,
+    "total_s": 30.756
+  },
+  "sample_response": "\n\n\n\nA CPU cache is a small, fast memory located close to the CPU that stores frequently accessed data to reduce the time required to fetch it from main memory. It operates on the principle of locality, which includes temporal and spatial locality\u2014meaning data that is recently used or located near recently used data is more likely to be needed again.\n\nCaches are organized in levels: L1 (fastest, smallest), L2, and L3 (slower, larger). Each level serves as a buffer between the CPU and main memory, with each level being progressively larger and slower. The CPU uses a cache hierarchy to minimize the latency of memory access.\n\nWhen the CPU requests data, it first checks the L1 cache. If the data is not there, it checks the L2, then L3, and finally main memory. If data is found in a higher-level cache, it is quickly retrieved. If not, the data is fetched from main memory and copied up through the cache hierarchy, a process known as a cache miss.\n\nThis hierarchical design ensures that the most frequently used data is readily available, improving overall system performance. Caches use various replacement policies, such as LRU (Least Recently Used), to manage which data to keep and which to",
+  "runs": [
+    {
+      "prompt_tokens": 52,
+      "completion_tokens": 256,
+      "chunks": 247,
+      "ttft_s": 4.8,
+      "decode_tps": 8.96,
+      "prefill_tps": 10.8,
+      "total_s": 33.255,
+      "size": "short"
+    },
+    {
+      "prompt_tokens": 52,
+      "completion_tokens": 225,
+      "chunks": 217,
+      "ttft_s": 4.811,
+      "decode_tps": 9.99,
+      "prefill_tps": 10.8,
+      "total_s": 27.239,
+      "size": "short"
+    },
+    {
+      "prompt_tokens": 52,
+      "completion_tokens": 225,
+      "chunks": 217,
+      "ttft_s": 4.695,
+      "decode_tps": 10.25,
+      "prefill_tps": 11.1,
+      "total_s": 26.553,
+      "size": "short"
+    },
+    {
+      "prompt_tokens": 1167,
+      "completion_tokens": 226,
+      "chunks": 222,
+      "ttft_s": 11.574,
+      "decode_tps": 9.77,
+      "prefill_tps": 100.8,
+      "total_s": 34.594,
+      "size": "medium"
+    },
+    {
+      "prompt_tokens": 1167,
+      "completion_tokens": 233,
+      "chunks": 225,
+      "ttft_s": 10.733,
+      "decode_tps": 9.8,
+      "prefill_tps": 108.7,
+      "total_s": 34.399,
+      "size": "medium"
+    },
+    {
+      "prompt_tokens": 1167,
+      "completion_tokens": 233,
+      "chunks": 225,
+      "ttft_s": 10.636,
+      "decode_tps": 9.73,
+      "prefill_tps": 109.7,
+      "total_s": 34.476,
+      "size": "medium"
+    },
+    {
+      "prompt_tokens": 4329,
+      "completion_tokens": 256,
+      "chunks": 249,
+      "ttft_s": 30.786,
+      "decode_tps": 6.48,
+      "prefill_tps": 140.6,
+      "total_s": 70.163,
+      "size": "long"
+    },
+    {
+      "prompt_tokens": 4329,
+      "completion_tokens": 243,
+      "chunks": 235,
+      "ttft_s": 30.49,
+      "decode_tps": 6.51,
+      "prefill_tps": 142.0,
+      "total_s": 67.64,
+      "size": "long"
+    },
+    {
+      "prompt_tokens": 4329,
+      "completion_tokens": 215,
+      "chunks": 209,
+      "ttft_s": 30.306,
+      "decode_tps": 6.5,
+      "prefill_tps": 142.8,
+      "total_s": 63.249,
+      "size": "long"
+    }
+  ],
+  "median": {
+    "short": {
+      "prompt_tokens": 52,
+      "completion_tokens": 225,
+      "ttft_s": 4.8,
+      "prefill_tps": 10.8,
+      "decode_tps": 9.99
+    },
+    "medium": {
+      "prompt_tokens": 1167,
+      "completion_tokens": 233,
+      "ttft_s": 10.733,
+      "prefill_tps": 108.7,
+      "decode_tps": 9.77
+    },
+    "long": {
+      "prompt_tokens": 4329,
+      "completion_tokens": 243,
+      "ttft_s": 30.49,
+      "prefill_tps": 142.0,
+      "decode_tps": 6.5
+    }
+  },
+  "power_and_util": {
+    "idle": {
+      "package_w": 34.4,
+      "cores_w": 22.4,
+      "igpu_w": 0.6,
+      "cpu_util_pct": 19.7,
+      "samples": 11
+    },
+    "startup": {
+      "package_w": 58.5,
+      "cores_w": 45.3,
+      "igpu_w": 0.6,
+      "cpu_util_pct": 36.0,
+      "samples": 30
+    },
+    "cold_first": {
+      "package_w": 43.8,
+      "cores_w": 24.9,
+      "igpu_w": 0.7,
+      "cpu_util_pct": 23.0,
+      "engines": {
+        "neural@0x00000000_0x0001bb2a": {
+          "mean_pct": 96.4,
+          "max_pct": 106.2
+        }
+      },
+      "samples": 30
+    },
+    "short": {
+      "package_w": 34.2,
+      "cores_w": 16.1,
+      "igpu_w": 0.3,
+      "cpu_util_pct": 19.0,
+      "engines": {
+        "neural@0x00000000_0x0001bb2a": {
+          "mean_pct": 96.4,
+          "max_pct": 108.2
+        }
+      },
+      "samples": 84
+    },
+    "medium": {
+      "package_w": 24.9,
+      "cores_w": 7.7,
+      "igpu_w": 0.0,
+      "cpu_util_pct": 22.2,
+      "engines": {
+        "neural@0x00000000_0x0001bb2a": {
+          "mean_pct": 92.4,
+          "max_pct": 108.2
+        }
+      },
+      "samples": 99
+    },
+    "long": {
+      "package_w": 23.7,
+      "cores_w": 6.8,
+      "igpu_w": 0.0,
+      "cpu_util_pct": 19.7,
+      "engines": {
+        "neural@0x00000000_0x0001bb2a": {
+          "mean_pct": 95.0,
+          "max_pct": 107.5
+        }
+      },
+      "samples": 195
+    },
+    "all_runs": {
+      "package_w": 26.4,
+      "cores_w": 9.1,
+      "igpu_w": 0.1,
+      "cpu_util_pct": 20.2,
+      "engines": {
+        "neural@0x00000000_0x0001bb2a": {
+          "mean_pct": 94.6,
+          "max_pct": 108.2
+        }
+      },
+      "samples": 378
+    },
+    "tool_call": {
+      "package_w": 22.4,
+      "cores_w": 5.0,
+      "igpu_w": 0.0,
+      "cpu_util_pct": 16.7,
+      "engines": {
+        "neural@0x00000000_0x0001bb2a": {
+          "mean_pct": 90.4,
+          "max_pct": 106.0
+        }
+      },
+      "samples": 6
+    }
+  }
+}

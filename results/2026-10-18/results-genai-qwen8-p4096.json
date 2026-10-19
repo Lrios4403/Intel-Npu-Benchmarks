@@ -1,0 +1,196 @@
+{
+  "label": "qwen8-p4096",
+  "cold": {
+    "label": "qwen8-p4096",
+    "model": "OpenVINO\\Qwen3-8B-int4-cw-ov",
+    "device": "NPU",
+    "config": {
+      "MAX_PROMPT_LEN": 4096,
+      "MIN_RESPONSE_LEN": 256,
+      "CACHE_DIR": "<scratch>\\genai\\cache\\qwen8-p4096"
+    },
+    "warm": false,
+    "openvino_genai": "2026.4.1.0-3408-ab01d1771e4",
+    "load_s": 55.5,
+    "runs": [
+      {
+        "size": "short",
+        "input_tokens": 60,
+        "output_tokens": 204,
+        "ttft_s": 6.171,
+        "tpot_ms": 99.1,
+        "decode_tps": 10.09,
+        "throughput_tps": 10.09,
+        "wall_s": 26.31,
+        "prefill_tps": 9.7,
+        "text": "<think>\n\n</think>\n\nA CPU cache is a small, fast memory located close to the CPU that stores frequently accessed data to reduce the time required to fetch it from main memory. It operates on the principle of locality, which includes temporal and spatial locality. Temporal locality refers to the tendency of a program to reuse data that has been recently accessed, while spatial locality refers to the tendency to access data that is located near recently accessed data. \n\nCaches are organized in levels, typically L1, L2, and L3, with each level being larger but slower than the previous. The L1 cach"
+      },
+      {
+        "size": "short",
+        "input_tokens": 60,
+        "output_tokens": 230,
+        "ttft_s": 4.49,
+        "tpot_ms": 98.0,
+        "decode_tps": 10.21,
+        "throughput_tps": 10.21,
+        "wall_s": 26.93,
+        "prefill_tps": 13.4
+      },
+      {
+        "size": "short",
+        "input_tokens": 60,
+        "output_tokens": 221,
+        "ttft_s": 4.478,
+        "tpot_ms": 97.6,
+        "decode_tps": 10.24,
+        "throughput_tps": 10.24,
+        "wall_s": 25.97,
+        "prefill_tps": 13.4
+      },
+      {
+        "size": "medium",
+        "input_tokens": 769,
+        "output_tokens": 219,
+        "ttft_s": 4.466,
+        "tpot_ms": 97.9,
+        "decode_tps": 10.21,
+        "throughput_tps": 10.21,
+        "wall_s": 25.83,
+        "prefill_tps": 172.2,
+        "text": "<think>\n\n</think>\n\nThe text provides a repetitive account of the evolution of personal computing, highlighting the transition from the early days of hobbyist computing to the modern era of advanced hardware and complex operating systems. In the 1970s and 1980s, personal computers were assembled from kits, and users, often hobbyists, wrote programs in BASIC. Software was shared on cassette tapes and floppy disks, and due to limited memory and storage, programmers had to optimize code using techniques like tight loops and lookup tables. As technology advanced, processors became more powerful wit"
+      },
+      {
+        "size": "medium",
+        "input_tokens": 769,
+        "output_tokens": 219,
+        "ttft_s": 4.507,
+        "tpot_ms": 103.1,
+        "decode_tps": 9.7,
+        "throughput_tps": 9.7,
+        "wall_s": 26.99,
+        "prefill_tps": 170.6
+      },
+      {
+        "size": "medium",
+        "input_tokens": 769,
+        "output_tokens": 219,
+        "ttft_s": 4.57,
+        "tpot_ms": 100.4,
+        "decode_tps": 9.96,
+        "throughput_tps": 9.96,
+        "wall_s": 26.47,
+        "prefill_tps": 168.3
+      },
+      {
+        "size": "long",
+        "input_tokens": 3623,
+        "output_tokens": 231,
+        "ttft_s": 22.395,
+        "tpot_ms": 115.7,
+        "decode_tps": 8.64,
+        "throughput_tps": 8.64,
+        "wall_s": 49.02,
+        "prefill_tps": 161.8,
+        "text": "<think>\n\n</think>\n\nThe text provides a repetitive and largely identical account of the early days of personal computing, emphasizing the technological and cultural context of the 1970s and 1980s. It describes how hobbyists assembled computers from kits, programmed in BASIC, and shared software via cassette tapes and floppy disks. At the time, computing resources were extremely limited\u2014memory was measured in kilobytes, storage was slow, and every byte counted. As a result, programmers developed efficient coding practices, such as using tight loops and lookup tables, to maximize the use of limit"
+      },
+      {
+        "size": "long",
+        "input_tokens": 3623,
+        "output_tokens": 237,
+        "ttft_s": 21.429,
+        "tpot_ms": 115.1,
+        "decode_tps": 8.69,
+        "throughput_tps": 8.69,
+        "wall_s": 48.6,
+        "prefill_tps": 169.1
+      },
+      {
+        "size": "long",
+        "input_tokens": 3623,
+        "output_tokens": 237,
+        "ttft_s": 21.469,
+        "tpot_ms": 115.5,
+        "decode_tps": 8.66,
+        "throughput_tps": 8.66,
+        "wall_s": 48.74,
+        "prefill_tps": 168.8
+      }
+    ],
+    "memory": {
+      "peak_working_set_gb": 0.0,
+      "peak_private_gb": 0.0
+    }
+  },
+  "warm": {
+    "label": "qwen8-p4096",
+    "model": "OpenVINO\\Qwen3-8B-int4-cw-ov",
+    "device": "NPU",
+    "config": {
+      "MAX_PROMPT_LEN": 4096,
+      "MIN_RESPONSE_LEN": 256,
+      "CACHE_DIR": "<scratch>\\genai\\cache\\qwen8-p4096"
+    },
+    "warm": true,
+    "openvino_genai": "2026.4.1.0-3408-ab01d1771e4",
+    "load_s": 36.4,
+    "runs": [
+      {
+        "size": "short",
+        "error": "Exception from src\\inference\\src\\cpp\\infer_request.cpp:224:\nCheck 'foundPort.found()' failed at src\\plugins\\intel_npu\\src\\backend\\src\\zero_infer_request.cpp:413:\nCannot find tensor for port opset1::Parameter Parameter_171399[0]:f16[1,32,1024,128]\n\n",
+        "wall_s": 0.6
+      },
+      {
+        "size": "medium",
+        "error": "Exception from src\\inference\\src\\cpp\\infer_request.cpp:224:\nCheck 'foundPort.found()' failed at src\\plugins\\intel_npu\\src\\backend\\src\\zero_infer_request.cpp:413:\nCannot find tensor for port opset1::Parameter Parameter_171399[0]:f16[1,32,1024,128]\n\n",
+        "wall_s": 0.1
+      },
+      {
+        "size": "long",
+        "error": "Exception from src\\inference\\src\\cpp\\infer_request.cpp:224:\nCheck 'foundPort.found()' failed at src\\plugins\\intel_npu\\src\\backend\\src\\zero_infer_request.cpp:413:\nCannot find tensor for port opset1::Parameter Parameter_171399[0]:f16[1,32,1024,128]\n\n",
+        "wall_s": 0.1
+      }
+    ],
+    "memory": {
+      "peak_working_set_gb": 0.0,
+      "peak_private_gb": 0.0
+    }
+  },
+  "summary": {
+    "model": "OpenVINO\\Qwen3-8B-int4-cw-ov",
+    "config": {
+      "MAX_PROMPT_LEN": 4096,
+      "MIN_RESPONSE_LEN": 256
+    },
+    "cold_load_s": 55.5,
+    "warm_load_s": 36.4,
+    "cache_mb": 642,
+    "memory": {
+      "peak_working_set_gb": 0.0,
+      "peak_private_gb": 0.0
+    },
+    "load_error": null,
+    "per_size": {
+      "short": {
+        "input_tokens": 60,
+        "output_tokens": 221,
+        "ttft_s": 4.49,
+        "decode_tps": 10.21,
+        "prefill_tps": 13.4
+      },
+      "medium": {
+        "input_tokens": 769,
+        "output_tokens": 219,
+        "ttft_s": 4.507,
+        "decode_tps": 9.96,
+        "prefill_tps": 170.6
+      },
+      "long": {
+        "input_tokens": 3623,
+        "output_tokens": 237,
+        "ttft_s": 21.469,
+        "decode_tps": 8.66,
+        "prefill_tps": 168.8
+      }
+    }
+  }
+}

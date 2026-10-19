@@ -1,0 +1,44 @@
+[2026-10-18 18:15:51.057][7284][serving][info][server.cpp:115] OpenVINO Model Server 2026.4.0.869b2186
+[2026-10-18 18:15:51.057][7284][serving][info][server.cpp:116] OpenVINO backend 2026.4.0-22959-99c81491cc3-releases/2026/4
+[2026-10-18 18:15:51.057][7284][serving][info][server.cpp:119] OpenVINO GenAI backend 2026.4.0.0-3407-7ea2546852a
+[2026-10-18 18:15:51.058][44232][modelmanager][info][servable_loading_queue.cpp:89] Started servable loading queue thread
+[2026-10-18 18:15:51.058][7284][modelmanager][info][modelmanager.cpp:206] Model cache is enabled: .ovcache
+[2026-10-18 18:15:51.302][7284][modelmanager][info][modelmanager.cpp:252] Available devices for Open VINO: CPU, GPU.0, GPU.1, NPU
+[2026-10-18 18:15:51.305][7284][serving][info][capimodule.cpp:40] C-APIModule starting
+[2026-10-18 18:15:51.305][7284][serving][info][capimodule.cpp:42] C-APIModule started
+[2026-10-18 18:15:51.305][7284][serving][info][grpcservermodule.cpp:106] GRPCServerModule starting
+[2026-10-18 18:15:51.305][7284][serving][info][grpcservermodule.cpp:110] GRPCServerModule started
+[2026-10-18 18:15:51.305][7284][serving][info][grpcservermodule.cpp:111] Port was not set. GRPC server will not be started.
+[2026-10-18 18:15:51.305][7284][serving][info][httpservermodule.cpp:35] HTTPServerModule starting
+[2026-10-18 18:15:51.305][7284][serving][info][httpservermodule.cpp:39] Will start 24 REST workers
+[2026-10-18 18:15:51.306][12008][serving][info][drogon_http_server.cpp:157] Binding REST server to address: 127.0.0.1:8000
+[2026-10-18 18:15:51.365][7284][serving][info][drogon_http_server.cpp:187] REST server listening on port 8000 with 24 unary threads and 24 streaming threads
+[2026-10-18 18:15:51.365][7284][serving][info][http_server.cpp:242] API key not provided via --api_key_file or API_KEY environment variable. Authentication will be disabled.
+[2026-10-18 18:15:51.366][7284][serving][info][httpservermodule.cpp:52] HTTPServerModule started
+[2026-10-18 18:15:51.366][7284][serving][info][httpservermodule.cpp:53] Started REST server at 127.0.0.1:8000
+[2026-10-18 18:15:51.458][7284][serving][info][libgit2.cpp:1322] Path already exists on local filesystem. Skipping download to path: %USERPROFILE%\Downloads\models\OpenVINO\Qwen3-8B-int4-cw-ov
+Model: OpenVINO/Qwen3-8B-int4-cw-ov downloaded to: %USERPROFILE%\Downloads\models\OpenVINO\Qwen3-8B-int4-cw-ov
+Graph: graph.pbtxt created in: %USERPROFILE%\Downloads\models\OpenVINO\Qwen3-8B-int4-cw-ov
+[2026-10-18 18:15:51.460][7284][serving][info][servablemanagermodule.cpp:51] ServableManagerModule starting
+[2026-10-18 18:15:51.463][44232][serving][info][mediapipegraphdefinition.cpp:643] MediapipeGraphDefinition initializing graph nodes
+[2026-10-18 18:15:51.463][44232][modelmanager][info][servable_initializer.cpp:697] Initializing Language Model Legacy servable
+[2026-10-18 18:16:33.414][44232][llm_calculator][info][servable_initializer.cpp:228] Using manually configured tool_parser: hermes3
+[2026-10-18 18:16:33.415][44232][llm_calculator][info][servable_initializer.cpp:241] Auto-detected reasoning_parser: qwen3
+[2026-10-18 18:16:33.457][44256][llm_executor][info][executor_base.hpp:71] All requests: 0;
+[2026-10-18 18:16:33.492][44232][modelmanager][info][mediapipegraphdefinition.cpp:300] Mediapipe: Qwen3-8B inputs: 
+name: input; mapping: ; shape: (); precision: UNDEFINED; layout: ...
+[2026-10-18 18:16:33.492][44232][modelmanager][info][mediapipegraphdefinition.cpp:301] Mediapipe: Qwen3-8B outputs: 
+name: output; mapping: ; shape: (); precision: UNDEFINED; layout: ...
+[2026-10-18 18:16:33.492][44232][modelmanager][info][mediapipegraphdefinition.cpp:302] Mediapipe: Qwen3-8B kfs pass through: false
+[2026-10-18 18:16:33.492][44232][modelmanager][info][pipelinedefinitionstatus.hpp:61] Mediapipe: Qwen3-8B state changed to: AVAILABLE after handling: ValidationPassedEvent: 
+[2026-10-18 18:16:33.494][24176][modelmanager][info][modelmanager.cpp:1213] Started cleaner thread
+[2026-10-18 18:16:33.494][38812][modelmanager][info][modelmanager.cpp:1184] Started model manager thread
+[2026-10-18 18:16:33.495][7284][serving][info][servablemanagermodule.cpp:55] ServableManagerModule started
+[2026-10-18 18:16:34.013][44256][llm_executor][info][executor_base.hpp:71] All requests: 1;
+[2026-10-18 18:17:04.649][44256][llm_executor][info][executor_base.hpp:71] All requests: 0;
+[2026-10-18 18:17:04.656][44256][llm_executor][info][executor_base.hpp:71] All requests: 1;
+[2026-10-18 18:17:30.066][44256][llm_executor][info][executor_base.hpp:71] All requests: 0;
+[2026-10-18 18:17:30.075][44256][llm_executor][info][executor_base.hpp:71] All requests: 1;
+[2026-10-18 18:17:55.926][44256][llm_executor][info][executor_base.hpp:71] All requests: 0;
+[2026-10-18 18:17:55.943][44256][llm_executor][info][executor_base.hpp:71] All requests: 1;
+[2026-10-18 18:18:22.602][44256][llm_executor][info][executor_base.hpp:71] All requests: 0;

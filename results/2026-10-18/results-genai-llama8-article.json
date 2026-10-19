@@ -1,0 +1,164 @@
+{
+  "label": "llama8-article",
+  "cold": {
+    "label": "llama8-article",
+    "model": "llmware\\llama-3.1-8b-instruct-npu-ov",
+    "device": "NPU",
+    "config": {
+      "MAX_PROMPT_LEN": 1024,
+      "MIN_RESPONSE_LEN": 1,
+      "CACHE_DIR": "<scratch>\\genai\\cache\\llama8-article"
+    },
+    "warm": false,
+    "openvino_genai": "2026.4.1.0-3408-ab01d1771e4",
+    "load_s": 178.8,
+    "runs": [
+      {
+        "size": "short",
+        "input_tokens": 68,
+        "output_tokens": 256,
+        "ttft_s": 5.196,
+        "tpot_ms": 104.7,
+        "decode_tps": 9.55,
+        "throughput_tps": 9.55,
+        "wall_s": 31.92,
+        "prefill_tps": 13.1,
+        "text": "**CPU Cache Overview**\n\nA CPU cache is a small, high-speed memory cache built into the central processing unit (CPU). It acts as a buffer between the main memory and the CPU, significantly improving system performance.\n\n**How it Works**\n\nHere's a simplified explanation:\n\n1. **Data Retrieval**: When the CPU requests data from the main memory, it sends a request to the cache controller.\n2. **Cache Hit**: If the requested data is already stored in the cache, the controller retrieves it directly from the cache, reducing latency.\n3. **Cache Miss**: If the data is not in the cache, the controller re"
+      },
+      {
+        "size": "short",
+        "input_tokens": 68,
+        "output_tokens": 256,
+        "ttft_s": 4.577,
+        "tpot_ms": 96.6,
+        "decode_tps": 10.35,
+        "throughput_tps": 10.35,
+        "wall_s": 29.21,
+        "prefill_tps": 14.9
+      },
+      {
+        "size": "short",
+        "input_tokens": 68,
+        "output_tokens": 256,
+        "ttft_s": 4.562,
+        "tpot_ms": 96.5,
+        "decode_tps": 10.36,
+        "throughput_tps": 10.36,
+        "wall_s": 29.17,
+        "prefill_tps": 14.9
+      },
+      {
+        "size": "medium",
+        "input_tokens": 777,
+        "output_tokens": 236,
+        "ttft_s": 4.577,
+        "tpot_ms": 96.7,
+        "decode_tps": 10.34,
+        "throughput_tps": 10.34,
+        "wall_s": 27.31,
+        "prefill_tps": 169.8,
+        "text": "The provided text describes the evolution of personal computing from its early days to the present. In the early days, hobbyists assembled machines from kits, wrote programs in BASIC, and traded software on cassette tapes and floppy disks. Memory was measured in kilobytes, storage was slow, and every byte mattered, so programmers learned to optimize their code by writing tight loops and using lookup tables.\n\nOver the following decades, processors underwent significant advancements, including the introduction of caches, pipelines, multiple cores, and dedicated accelerators. Operating systems al"
+      },
+      {
+        "size": "medium",
+        "input_tokens": 777,
+        "output_tokens": 236,
+        "ttft_s": 4.565,
+        "tpot_ms": 96.5,
+        "decode_tps": 10.37,
+        "throughput_tps": 10.37,
+        "wall_s": 27.23,
+        "prefill_tps": 170.2
+      },
+      {
+        "size": "medium",
+        "input_tokens": 777,
+        "output_tokens": 222,
+        "ttft_s": 4.576,
+        "tpot_ms": 96.6,
+        "decode_tps": 10.35,
+        "throughput_tps": 10.35,
+        "wall_s": 25.92,
+        "prefill_tps": 169.8
+      }
+    ],
+    "memory": {
+      "peak_working_set_gb": 8.7,
+      "peak_private_gb": 2.0
+    }
+  },
+  "warm": {
+    "label": "llama8-article",
+    "model": "llmware\\llama-3.1-8b-instruct-npu-ov",
+    "device": "NPU",
+    "config": {
+      "MAX_PROMPT_LEN": 1024,
+      "MIN_RESPONSE_LEN": 1,
+      "CACHE_DIR": "<scratch>\\genai\\cache\\llama8-article"
+    },
+    "warm": true,
+    "openvino_genai": "2026.4.1.0-3408-ab01d1771e4",
+    "load_s": 18.7,
+    "runs": [
+      {
+        "size": "short",
+        "input_tokens": 68,
+        "output_tokens": 256,
+        "ttft_s": 5.568,
+        "tpot_ms": 96.6,
+        "decode_tps": 10.35,
+        "throughput_tps": 10.35,
+        "wall_s": 30.22,
+        "prefill_tps": 12.2,
+        "text": "**CPU Cache Overview**\n\nA CPU cache is a small, high-speed memory cache built into the central processing unit (CPU). It acts as a buffer between the main memory and the CPU, significantly improving system performance.\n\n**How it Works**\n\nHere's a simplified explanation:\n\n1. **Data Retrieval**: When the CPU requests data from the main memory, it sends a request to the cache controller.\n2. **Cache Hit**: If the requested data is already stored in the cache, the controller retrieves it directly from the cache, reducing latency.\n3. **Cache Miss**: If the data is not in the cache, the controller re"
+      },
+      {
+        "size": "medium",
+        "input_tokens": 777,
+        "output_tokens": 236,
+        "ttft_s": 4.604,
+        "tpot_ms": 96.0,
+        "decode_tps": 10.41,
+        "throughput_tps": 10.41,
+        "wall_s": 27.18,
+        "prefill_tps": 168.8,
+        "text": "The provided text describes the evolution of personal computing from its early days to the present. In the early days, hobbyists assembled machines from kits, wrote programs in BASIC, and traded software on cassette tapes and floppy disks. Memory was measured in kilobytes, storage was slow, and every byte mattered, so programmers learned to optimize their code by writing tight loops and using lookup tables.\n\nOver the following decades, processors underwent significant advancements, including the introduction of caches, pipelines, multiple cores, and dedicated accelerators. Operating systems al"
+      }
+    ],
+    "memory": {
+      "peak_working_set_gb": 7.67,
+      "peak_private_gb": 2.36
+    }
+  },
+  "summary": {
+    "model": "llmware\\llama-3.1-8b-instruct-npu-ov",
+    "config": {
+      "MAX_PROMPT_LEN": 1024,
+      "MIN_RESPONSE_LEN": 1
+    },
+    "cold_load_s": 178.8,
+    "warm_load_s": 18.7,
+    "cache_mb": 543,
+    "memory": {
+      "peak_working_set_gb": 8.7,
+      "peak_private_gb": 2.0
+    },
+    "load_error": null,
+    "per_size": {
+      "short": {
+        "input_tokens": 68,
+        "output_tokens": 256,
+        "ttft_s": 4.577,
+        "decode_tps": 10.35,
+        "prefill_tps": 14.9
+      },
+      "medium": {
+        "input_tokens": 777,
+        "output_tokens": 236,
+        "ttft_s": 4.576,
+        "decode_tps": 10.35,
+        "prefill_tps": 169.8
+      }
+    }
+  }
+}

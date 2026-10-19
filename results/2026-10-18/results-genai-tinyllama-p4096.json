@@ -1,0 +1,164 @@
+{
+  "label": "tinyllama-p4096",
+  "cold": {
+    "label": "tinyllama-p4096",
+    "model": "OpenVINO\\TinyLlama-1.1B-Chat-v1.0-int4-ov",
+    "device": "NPU",
+    "config": {
+      "MAX_PROMPT_LEN": 4096,
+      "MIN_RESPONSE_LEN": 256,
+      "CACHE_DIR": "<scratch>\\genai\\cache\\tinyllama-p4096"
+    },
+    "warm": false,
+    "openvino_genai": "2026.4.1.0-3408-ab01d1771e4",
+    "load_s": 85.5,
+    "runs": [
+      {
+        "size": "short",
+        "input_tokens": 73,
+        "output_tokens": 256,
+        "ttft_s": 1.579,
+        "tpot_ms": 30.1,
+        "decode_tps": 33.25,
+        "throughput_tps": 33.25,
+        "wall_s": 9.25,
+        "prefill_tps": 46.2,
+        "text": "In the context of a CPU, a cache is a temporary storage area that stores frequently accessed data. The cache is a fast and efficient way to store data that is frequently accessed by the CPU. The cache is organized into different levels, with the highest level being the L1 cache, which is the smallest and fastest cache.\n\nThe L1 cache is a shared cache that is shared by all cores in a CPU. It is a 1MB-sized cache that stores data that is frequently accessed by the CPU. The L1 cache is divided into three levels:\n\n1. Level 1 (L1) - This is the smallest and fastest cache. It stores data that is fre"
+      },
+      {
+        "size": "short",
+        "input_tokens": 73,
+        "output_tokens": 256,
+        "ttft_s": 1.306,
+        "tpot_ms": 29.8,
+        "decode_tps": 33.57,
+        "throughput_tps": 33.57,
+        "wall_s": 8.9,
+        "prefill_tps": 55.9
+      },
+      {
+        "size": "short",
+        "input_tokens": 73,
+        "output_tokens": 256,
+        "ttft_s": 1.317,
+        "tpot_ms": 30.1,
+        "decode_tps": 33.27,
+        "throughput_tps": 33.27,
+        "wall_s": 8.98,
+        "prefill_tps": 55.4
+      },
+      {
+        "size": "medium",
+        "input_tokens": 958,
+        "output_tokens": 256,
+        "ttft_s": 1.317,
+        "tpot_ms": 30.1,
+        "decode_tps": 33.2,
+        "throughput_tps": 33.2,
+        "wall_s": 9.0,
+        "prefill_tps": 727.4,
+        "text": "Benchmark request tinyllama-p4096-medium-0-1792371032862654800.\n\nSection 1. In the early days of personal computing, hobbyists assembled machines from kits, wrote programs in BASIC, and traded software on cassette tapes and floppy disks. Memory was measured in kilobytes, storage was slow, and every byte mattered, so programmers learned to squeeze routines into tight loops and lookup tables. Over the following decades processors gained caches, pipelines, multiple cores and dedicated accelerators, while operating systems grew from simple monitors into complex platforms that schedule work across "
+      },
+      {
+        "size": "medium",
+        "input_tokens": 958,
+        "output_tokens": 256,
+        "ttft_s": 1.316,
+        "tpot_ms": 30.1,
+        "decode_tps": 33.18,
+        "throughput_tps": 33.18,
+        "wall_s": 9.0,
+        "prefill_tps": 728.0
+      },
+      {
+        "size": "medium",
+        "input_tokens": 958,
+        "output_tokens": 256,
+        "ttft_s": 1.321,
+        "tpot_ms": 30.3,
+        "decode_tps": 33.05,
+        "throughput_tps": 33.05,
+        "wall_s": 9.04,
+        "prefill_tps": 725.2
+      }
+    ],
+    "memory": {
+      "peak_working_set_gb": 1.72,
+      "peak_private_gb": 1.18
+    }
+  },
+  "warm": {
+    "label": "tinyllama-p4096",
+    "model": "OpenVINO\\TinyLlama-1.1B-Chat-v1.0-int4-ov",
+    "device": "NPU",
+    "config": {
+      "MAX_PROMPT_LEN": 4096,
+      "MIN_RESPONSE_LEN": 256,
+      "CACHE_DIR": "<scratch>\\genai\\cache\\tinyllama-p4096"
+    },
+    "warm": true,
+    "openvino_genai": "2026.4.1.0-3408-ab01d1771e4",
+    "load_s": 1.8,
+    "runs": [
+      {
+        "size": "short",
+        "input_tokens": 73,
+        "output_tokens": 256,
+        "ttft_s": 1.48,
+        "tpot_ms": 30.1,
+        "decode_tps": 33.23,
+        "throughput_tps": 33.23,
+        "wall_s": 9.16,
+        "prefill_tps": 49.3,
+        "text": "In the context of a CPU, a cache is a temporary storage area that stores frequently accessed data. The cache is a fast and efficient way to store data that is frequently accessed by the CPU. The cache is organized into different levels, with the highest level being the L1 cache, which is the smallest and fastest cache.\n\nThe L1 cache is a shared cache that is shared by all cores in a CPU. It is a 1MB-sized cache that stores data that is frequently accessed by the CPU. The L1 cache is divided into three levels:\n\n1. Level 1 (L1) - This is the smallest and fastest cache. It stores data that is fre"
+      },
+      {
+        "size": "medium",
+        "input_tokens": 958,
+        "output_tokens": 256,
+        "ttft_s": 1.312,
+        "tpot_ms": 29.8,
+        "decode_tps": 33.58,
+        "throughput_tps": 33.58,
+        "wall_s": 8.91,
+        "prefill_tps": 730.2,
+        "text": "Benchmark request tinyllama-p4096-medium-0-1792371072838013000.\n\nSection 1. In the early days of personal computing, hobbyists assembled machines from kits, wrote programs in BASIC, and traded software on cassette tapes and floppy disks. Memory was measured in kilobytes, storage was slow, and every byte mattered, so programmers learned to squeeze routines into tight loops and lookup tables. Over the following decades processors gained caches, pipelines, multiple cores and dedicated accelerators, while operating systems grew from simple monitors into complex platforms that schedule work across "
+      }
+    ],
+    "memory": {
+      "peak_working_set_gb": 1.52,
+      "peak_private_gb": 1.03
+    }
+  },
+  "summary": {
+    "model": "OpenVINO\\TinyLlama-1.1B-Chat-v1.0-int4-ov",
+    "config": {
+      "MAX_PROMPT_LEN": 4096,
+      "MIN_RESPONSE_LEN": 256
+    },
+    "cold_load_s": 85.5,
+    "warm_load_s": 1.8,
+    "cache_mb": 112,
+    "memory": {
+      "peak_working_set_gb": 1.72,
+      "peak_private_gb": 1.18
+    },
+    "load_error": null,
+    "per_size": {
+      "short": {
+        "input_tokens": 73,
+        "output_tokens": 256,
+        "ttft_s": 1.317,
+        "decode_tps": 33.27,
+        "prefill_tps": 55.4
+      },
+      "medium": {
+        "input_tokens": 958,
+        "output_tokens": 256,
+        "ttft_s": 1.317,
+        "decode_tps": 33.18,
+        "prefill_tps": 727.4
+      }
+    }
+  }
+}

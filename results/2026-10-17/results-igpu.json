@@ -1,0 +1,253 @@
+{
+  "label": "igpu",
+  "backend": "OVMS 2026.4.0",
+  "device": "GPU.0",
+  "model": "OpenVINO/Qwen3-8B-int4-cw-ov",
+  "command": "%USERPROFILE%\\Downloads\\ovms_windows_2026.4.0_python_off\\ovms\\ovms.exe --rest_port 8000 --rest_bind_address 127.0.0.1 --model_repository_path %USERPROFILE%\\Downloads\\models --source_model OpenVINO/Qwen3-8B-int4-cw-ov --model_name Qwen3-8B --task text_generation --target_device GPU.0 --tool_parser hermes3",
+  "startup_s": 19.4,
+  "endpoints": {
+    "GET /v1/models": 200,
+    "GET /v3/models": 200,
+    "GET /v3/v1/models": 200,
+    "POST /v1/chat/completions": 200,
+    "POST /v3/chat/completions": 200,
+    "POST /v3/v1/chat/completions": 200
+  },
+  "chat_path": "/v3/chat/completions",
+  "tool_call": {
+    "pass": true,
+    "name": "get_weather",
+    "arguments": {
+      "city": "Phoenix"
+    }
+  },
+  "memory": {
+    "peak_working_set_gb": 10.05,
+    "peak_private_gb": 9.81
+  },
+  "cold_first": {
+    "prompt_tokens": 32,
+    "completion_tokens": 243,
+    "chunks": 233,
+    "ttft_s": 0.466,
+    "decode_tps": 10.6,
+    "prefill_tps": 68.7,
+    "total_s": 23.292
+  },
+  "sample_response": "\n\n\n\nA CPU cache is a small, fast memory located close to the CPU that stores frequently accessed data to reduce the time required to access it from main memory. It operates on the principle that \"locality of reference,\" meaning programs often access the same or nearby memory locations. Caches are organized in levels: L1 (fastest, closest to the CPU), L2, and L3, with each subsequent level being larger but slower. \n\nData is stored in blocks called cache lines. When the CPU requests data, the cache checks if the data is already present (a cache hit) and retrieves it quickly. If not (a cache miss), the data is fetched from main memory and stored in the cache for future access. \n\nCaches use various replacement policies, such as Least Recently Used (LRU), to manage which data stays in the cache. This helps balance speed and space, as caches are much smaller than main memory. By reducing the need to access slower main memory, the CPU can execute instructions more efficiently, improving overall system performance.",
+  "runs": [
+    {
+      "prompt_tokens": 52,
+      "completion_tokens": 216,
+      "chunks": 208,
+      "ttft_s": 0.741,
+      "decode_tps": 10.61,
+      "prefill_tps": 70.2,
+      "total_s": 21.011,
+      "size": "short"
+    },
+    {
+      "prompt_tokens": 52,
+      "completion_tokens": 229,
+      "chunks": 225,
+      "ttft_s": 0.747,
+      "decode_tps": 10.58,
+      "prefill_tps": 69.6,
+      "total_s": 22.295,
+      "size": "short"
+    },
+    {
+      "prompt_tokens": 52,
+      "completion_tokens": 238,
+      "chunks": 232,
+      "ttft_s": 0.609,
+      "decode_tps": 10.43,
+      "prefill_tps": 85.4,
+      "total_s": 23.322,
+      "size": "short"
+    },
+    {
+      "prompt_tokens": 1167,
+      "completion_tokens": 233,
+      "chunks": 229,
+      "ttft_s": 8.821,
+      "decode_tps": 9.94,
+      "prefill_tps": 132.3,
+      "total_s": 32.152,
+      "size": "medium"
+    },
+    {
+      "prompt_tokens": 1167,
+      "completion_tokens": 197,
+      "chunks": 191,
+      "ttft_s": 8.741,
+      "decode_tps": 9.95,
+      "prefill_tps": 133.5,
+      "total_s": 28.437,
+      "size": "medium"
+    },
+    {
+      "prompt_tokens": 1167,
+      "completion_tokens": 217,
+      "chunks": 211,
+      "ttft_s": 8.706,
+      "decode_tps": 10.08,
+      "prefill_tps": 134.0,
+      "total_s": 30.141,
+      "size": "medium"
+    },
+    {
+      "prompt_tokens": 4329,
+      "completion_tokens": 247,
+      "chunks": 239,
+      "ttft_s": 53.814,
+      "decode_tps": 9.79,
+      "prefill_tps": 80.4,
+      "total_s": 78.951,
+      "size": "long"
+    },
+    {
+      "prompt_tokens": 4329,
+      "completion_tokens": 197,
+      "chunks": 193,
+      "ttft_s": 53.602,
+      "decode_tps": 9.66,
+      "prefill_tps": 80.8,
+      "total_s": 73.883,
+      "size": "long"
+    },
+    {
+      "prompt_tokens": 4329,
+      "completion_tokens": 221,
+      "chunks": 217,
+      "ttft_s": 54.002,
+      "decode_tps": 9.8,
+      "prefill_tps": 80.2,
+      "total_s": 76.459,
+      "size": "long"
+    }
+  ],
+  "median": {
+    "short": {
+      "prompt_tokens": 52,
+      "completion_tokens": 229,
+      "ttft_s": 0.741,
+      "prefill_tps": 70.2,
+      "decode_tps": 10.58
+    },
+    "medium": {
+      "prompt_tokens": 1167,
+      "completion_tokens": 217,
+      "ttft_s": 8.741,
+      "prefill_tps": 133.5,
+      "decode_tps": 9.95
+    },
+    "long": {
+      "prompt_tokens": 4329,
+      "completion_tokens": 221,
+      "ttft_s": 53.814,
+      "prefill_tps": 80.4,
+      "decode_tps": 9.79
+    }
+  },
+  "power_and_util": {
+    "idle": {
+      "package_w": 31.5,
+      "cores_w": 20.1,
+      "igpu_w": 0.5,
+      "cpu_util_pct": 18.6,
+      "samples": 11
+    },
+    "startup": {
+      "package_w": 52.8,
+      "cores_w": 40.5,
+      "igpu_w": 1.0,
+      "cpu_util_pct": 33.4,
+      "engines": {
+        "compute@0x00000000_0x00019fd4": {
+          "mean_pct": 24.2,
+          "max_pct": 312.0
+        }
+      },
+      "samples": 18
+    },
+    "cold_first": {
+      "package_w": 40.7,
+      "cores_w": 18.5,
+      "igpu_w": 8.3,
+      "cpu_util_pct": 24.7,
+      "engines": {
+        "compute@0x00000000_0x00019fd4": {
+          "mean_pct": 94.7,
+          "max_pct": 203.1
+        }
+      },
+      "samples": 23
+    },
+    "short": {
+      "package_w": 41.3,
+      "cores_w": 18.9,
+      "igpu_w": 8.5,
+      "cpu_util_pct": 24.3,
+      "engines": {
+        "compute@0x00000000_0x00019fd4": {
+          "mean_pct": 101.4,
+          "max_pct": 247.9
+        }
+      },
+      "samples": 64
+    },
+    "medium": {
+      "package_w": 44.9,
+      "cores_w": 22.0,
+      "igpu_w": 9.3,
+      "cpu_util_pct": 26.5,
+      "engines": {
+        "compute@0x00000000_0x00019fd4": {
+          "mean_pct": 99.6,
+          "max_pct": 865.1
+        }
+      },
+      "samples": 88
+    },
+    "long": {
+      "package_w": 40.7,
+      "cores_w": 18.2,
+      "igpu_w": 10.2,
+      "cpu_util_pct": 23.3,
+      "engines": {
+        "compute@0x00000000_0x00019fd4": {
+          "mean_pct": 100.9,
+          "max_pct": 1962.5
+        }
+      },
+      "samples": 223
+    },
+    "all_runs": {
+      "package_w": 41.8,
+      "cores_w": 19.2,
+      "igpu_w": 9.7,
+      "cpu_util_pct": 24.2,
+      "engines": {
+        "compute@0x00000000_0x00019fd4": {
+          "mean_pct": 100.7,
+          "max_pct": 1962.5
+        }
+      },
+      "samples": 375
+    },
+    "tool_call": {
+      "package_w": 44.9,
+      "cores_w": 21.1,
+      "igpu_w": 10.0,
+      "cpu_util_pct": 23.4,
+      "engines": {
+        "compute@0x00000000_0x00019fd4": {
+          "mean_pct": 99.1,
+          "max_pct": 194.7
+        }
+      },
+      "samples": 4
+    }
+  }
+}

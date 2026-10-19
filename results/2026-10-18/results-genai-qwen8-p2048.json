@@ -1,0 +1,164 @@
+{
+  "label": "qwen8-p2048",
+  "cold": {
+    "label": "qwen8-p2048",
+    "model": "OpenVINO\\Qwen3-8B-int4-cw-ov",
+    "device": "NPU",
+    "config": {
+      "MAX_PROMPT_LEN": 2048,
+      "MIN_RESPONSE_LEN": 256,
+      "CACHE_DIR": "<scratch>\\genai\\cache\\qwen8-p2048"
+    },
+    "warm": false,
+    "openvino_genai": "2026.4.1.0-3408-ab01d1771e4",
+    "load_s": 59.2,
+    "runs": [
+      {
+        "size": "short",
+        "input_tokens": 60,
+        "output_tokens": 196,
+        "ttft_s": 5.542,
+        "tpot_ms": 104.6,
+        "decode_tps": 9.56,
+        "throughput_tps": 9.56,
+        "wall_s": 25.97,
+        "prefill_tps": 10.8,
+        "text": "<think>\n\n</think>\n\nA CPU cache is a small, fast memory located close to the CPU that stores frequently accessed data and instructions to reduce the time required to access them from main memory. It operates on the principle of locality, which includes temporal and spatial locality. Temporal locality refers to the tendency of a program to reuse data or instructions recently accessed, while spatial locality refers to the tendency to access data from nearby memory locations. \n\nCaches are organized in levels, typically L1, L2, and L3, with each level being larger but slower than the previous. The "
+      },
+      {
+        "size": "short",
+        "input_tokens": 60,
+        "output_tokens": 224,
+        "ttft_s": 4.474,
+        "tpot_ms": 104.7,
+        "decode_tps": 9.56,
+        "throughput_tps": 9.56,
+        "wall_s": 27.82,
+        "prefill_tps": 13.4
+      },
+      {
+        "size": "short",
+        "input_tokens": 60,
+        "output_tokens": 225,
+        "ttft_s": 4.442,
+        "tpot_ms": 108.6,
+        "decode_tps": 9.21,
+        "throughput_tps": 9.21,
+        "wall_s": 28.76,
+        "prefill_tps": 13.5
+      },
+      {
+        "size": "medium",
+        "input_tokens": 769,
+        "output_tokens": 219,
+        "ttft_s": 4.466,
+        "tpot_ms": 102.9,
+        "decode_tps": 9.72,
+        "throughput_tps": 9.72,
+        "wall_s": 26.9,
+        "prefill_tps": 172.2,
+        "text": "<think>\n\n</think>\n\nThe text provides a repetitive account of the evolution of personal computing, highlighting the transition from the early days of hobbyist computing to the modern era of advanced hardware and complex operating systems. In the 1970s and 1980s, personal computers were assembled from kits, and users, often hobbyists, wrote programs in BASIC. Software was shared on cassette tapes and floppy disks, and due to limited memory and storage, programmers had to optimize code using techniques like tight loops and lookup tables. As technology advanced, processors became more powerful wit"
+      },
+      {
+        "size": "medium",
+        "input_tokens": 769,
+        "output_tokens": 219,
+        "ttft_s": 4.463,
+        "tpot_ms": 100.6,
+        "decode_tps": 9.94,
+        "throughput_tps": 9.94,
+        "wall_s": 26.4,
+        "prefill_tps": 172.3
+      },
+      {
+        "size": "medium",
+        "input_tokens": 769,
+        "output_tokens": 226,
+        "ttft_s": 4.421,
+        "tpot_ms": 98.9,
+        "decode_tps": 10.12,
+        "throughput_tps": 10.12,
+        "wall_s": 26.66,
+        "prefill_tps": 173.9
+      }
+    ],
+    "memory": {
+      "peak_working_set_gb": 0.0,
+      "peak_private_gb": 0.0
+    }
+  },
+  "warm": {
+    "label": "qwen8-p2048",
+    "model": "OpenVINO\\Qwen3-8B-int4-cw-ov",
+    "device": "NPU",
+    "config": {
+      "MAX_PROMPT_LEN": 2048,
+      "MIN_RESPONSE_LEN": 256,
+      "CACHE_DIR": "<scratch>\\genai\\cache\\qwen8-p2048"
+    },
+    "warm": true,
+    "openvino_genai": "2026.4.1.0-3408-ab01d1771e4",
+    "load_s": 20.5,
+    "runs": [
+      {
+        "size": "short",
+        "input_tokens": 60,
+        "output_tokens": 196,
+        "ttft_s": 6.145,
+        "tpot_ms": 99.3,
+        "decode_tps": 10.07,
+        "throughput_tps": 10.07,
+        "wall_s": 25.56,
+        "prefill_tps": 9.8,
+        "text": "<think>\n\n</think>\n\nA CPU cache is a small, fast memory located close to the CPU that stores frequently accessed data and instructions to reduce the time required to access them from main memory. It operates on the principle of locality, which includes temporal and spatial locality. Temporal locality refers to the tendency of a program to reuse data or instructions recently accessed, while spatial locality refers to the tendency to access data from nearby memory locations. \n\nCaches are organized in levels, typically L1, L2, and L3, with each level being larger but slower than the previous. The "
+      },
+      {
+        "size": "medium",
+        "input_tokens": 769,
+        "output_tokens": 219,
+        "ttft_s": 4.423,
+        "tpot_ms": 98.5,
+        "decode_tps": 10.15,
+        "throughput_tps": 10.15,
+        "wall_s": 25.91,
+        "prefill_tps": 173.9,
+        "text": "<think>\n\n</think>\n\nThe text provides a repetitive account of the evolution of personal computing, highlighting the transition from the early days of hobbyist computing to the modern era of advanced hardware and complex operating systems. In the 1970s and 1980s, personal computers were assembled from kits, and users, often hobbyists, wrote programs in BASIC. Software was shared on cassette tapes and floppy disks, and due to limited memory and storage, programmers had to optimize code using techniques like tight loops and lookup tables. As technology advanced, processors became more powerful wit"
+      }
+    ],
+    "memory": {
+      "peak_working_set_gb": 0.0,
+      "peak_private_gb": 0.0
+    }
+  },
+  "summary": {
+    "model": "OpenVINO\\Qwen3-8B-int4-cw-ov",
+    "config": {
+      "MAX_PROMPT_LEN": 2048,
+      "MIN_RESPONSE_LEN": 256
+    },
+    "cold_load_s": 59.2,
+    "warm_load_s": 20.5,
+    "cache_mb": 625,
+    "memory": {
+      "peak_working_set_gb": 0.0,
+      "peak_private_gb": 0.0
+    },
+    "load_error": null,
+    "per_size": {
+      "short": {
+        "input_tokens": 60,
+        "output_tokens": 224,
+        "ttft_s": 4.474,
+        "decode_tps": 9.56,
+        "prefill_tps": 13.4
+      },
+      "medium": {
+        "input_tokens": 769,
+        "output_tokens": 219,
+        "ttft_s": 4.463,
+        "decode_tps": 9.94,
+        "prefill_tps": 172.3
+      }
+    }
+  }
+}

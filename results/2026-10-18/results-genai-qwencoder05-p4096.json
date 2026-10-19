@@ -1,0 +1,37 @@
+{
+  "label": "qwencoder05-p4096",
+  "cold": {
+    "label": "qwencoder05-p4096",
+    "model": "OpenVINO\\Qwen2.5-Coder-0.5B-Instruct-int4-ov",
+    "device": "NPU",
+    "config": {
+      "MAX_PROMPT_LEN": 4096,
+      "MIN_RESPONSE_LEN": 256,
+      "CACHE_DIR": "<scratch>\\genai\\cache\\qwencoder05-p4096"
+    },
+    "warm": false,
+    "openvino_genai": "2026.4.1.0-3408-ab01d1771e4",
+    "load_error": "Exception from src\\inference\\src\\cpp\\core.cpp:120:\nException from src\\inference\\src\\dev\\plugin.cpp:54:\nException from src\\inference\\src\\dev\\plugin.cpp:54:\nException from src\\plugins\\intel_npu\\src\\plugin\\src\\plugin.cpp:560:\nException from src\\plugins\\intel_npu\\src\\compiler_adapter\\src\\ze_graph_ext_wrappers.cpp:433:\nCompilation failed. Level0 pfnCreate2 result: ZE_RESULT_ERROR_INVALID_NULL_POINTER, code 0x78000007 - pointer argument may not be nullptr . [NPU_VCL] Compiler returned msg:\nCompilation failed\n\n\n\n\n",
+    "load_s": 80.6,
+    "memory": {
+      "peak_working_set_gb": 0.45,
+      "peak_private_gb": 1.15
+    }
+  },
+  "summary": {
+    "model": "OpenVINO\\Qwen2.5-Coder-0.5B-Instruct-int4-ov",
+    "config": {
+      "MAX_PROMPT_LEN": 4096,
+      "MIN_RESPONSE_LEN": 256
+    },
+    "cold_load_s": 80.6,
+    "warm_load_s": null,
+    "cache_mb": 0,
+    "memory": {
+      "peak_working_set_gb": 0.45,
+      "peak_private_gb": 1.15
+    },
+    "load_error": "Exception from src\\inference\\src\\cpp\\core.cpp:120:\nException from src\\inference\\src\\dev\\plugin.cpp:54:\nException from src\\inference\\src\\dev\\plugin.cpp:54:\nException from src\\plugins\\intel_npu\\src\\plugin\\src\\plugin.cpp:560:\nException from src\\plugins\\intel_npu\\src\\compiler_adapter\\src\\ze_graph_ext_wrappers.cpp:433:\nCompilation failed. Level0 pfnCreate2 result: ZE_RESULT_ERROR_INVALID_NULL_POINTER, code 0x78000007 - pointer argument may not be nullptr . [NPU_VCL] Compiler returned msg:\nCompilation failed\n\n\n\n\n",
+    "per_size": {}
+  }
+}

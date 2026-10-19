@@ -1,0 +1,65 @@
+[2026-10-17 19:31:57.985][44624][serving][info][server.cpp:115] OpenVINO Model Server 2026.4.0.869b2186
+[2026-10-17 19:31:57.985][44624][serving][info][server.cpp:116] OpenVINO backend 2026.4.0-22959-99c81491cc3-releases/2026/4
+[2026-10-17 19:31:57.985][44624][serving][info][server.cpp:119] OpenVINO GenAI backend 2026.4.0.0-3407-7ea2546852a
+[2026-10-17 19:31:57.990][42896][modelmanager][info][servable_loading_queue.cpp:89] Started servable loading queue thread
+[2026-10-17 19:31:57.990][44624][modelmanager][info][modelmanager.cpp:206] Model cache is enabled: .ovcache
+[2026-10-17 19:31:58.615][44624][modelmanager][info][modelmanager.cpp:252] Available devices for Open VINO: CPU, GPU.0, GPU.1, NPU
+[2026-10-17 19:31:58.621][44624][serving][info][capimodule.cpp:40] C-APIModule starting
+[2026-10-17 19:31:58.622][44624][serving][info][capimodule.cpp:42] C-APIModule started
+[2026-10-17 19:31:58.623][44624][serving][info][grpcservermodule.cpp:106] GRPCServerModule starting
+[2026-10-17 19:31:58.623][44624][serving][info][grpcservermodule.cpp:110] GRPCServerModule started
+[2026-10-17 19:31:58.623][44624][serving][info][grpcservermodule.cpp:111] Port was not set. GRPC server will not be started.
+[2026-10-17 19:31:58.623][44624][serving][info][httpservermodule.cpp:35] HTTPServerModule starting
+[2026-10-17 19:31:58.623][44624][serving][info][httpservermodule.cpp:39] Will start 24 REST workers
+[2026-10-17 19:31:58.625][40524][serving][info][drogon_http_server.cpp:157] Binding REST server to address: 127.0.0.1:8000
+[2026-10-17 19:31:58.687][44624][serving][info][drogon_http_server.cpp:187] REST server listening on port 8000 with 24 unary threads and 24 streaming threads
+[2026-10-17 19:31:58.687][44624][serving][info][http_server.cpp:242] API key not provided via --api_key_file or API_KEY environment variable. Authentication will be disabled.
+[2026-10-17 19:31:58.692][44624][serving][info][httpservermodule.cpp:52] HTTPServerModule started
+[2026-10-17 19:31:58.692][44624][serving][info][httpservermodule.cpp:53] Started REST server at 127.0.0.1:8000
+[2026-10-17 19:31:59.036][44624][serving][info][libgit2.cpp:1322] Path already exists on local filesystem. Skipping download to path: %USERPROFILE%\Downloads\models\OpenVINO\Qwen3-8B-int4-cw-ov
+Model: OpenVINO/Qwen3-8B-int4-cw-ov downloaded to: %USERPROFILE%\Downloads\models\OpenVINO\Qwen3-8B-int4-cw-ov
+Graph: graph.pbtxt created in: %USERPROFILE%\Downloads\models\OpenVINO\Qwen3-8B-int4-cw-ov
+[2026-10-17 19:31:59.042][44624][serving][info][servablemanagermodule.cpp:51] ServableManagerModule starting
+[2026-10-17 19:31:59.070][42896][serving][info][mediapipegraphdefinition.cpp:643] MediapipeGraphDefinition initializing graph nodes
+[2026-10-17 19:31:59.071][42896][modelmanager][info][servable_initializer.cpp:697] Initializing Language Model Legacy servable
+[2026-10-17 19:32:28.408][42896][llm_calculator][info][servable_initializer.cpp:228] Using manually configured tool_parser: hermes3
+[2026-10-17 19:32:28.409][42896][llm_calculator][info][servable_initializer.cpp:241] Auto-detected reasoning_parser: qwen3
+[2026-10-17 19:32:28.428][44904][llm_executor][info][executor_base.hpp:71] All requests: 0;
+[2026-10-17 19:32:28.454][42896][modelmanager][info][mediapipegraphdefinition.cpp:300] Mediapipe: Qwen3-8B inputs: 
+name: input; mapping: ; shape: (); precision: UNDEFINED; layout: ...
+[2026-10-17 19:32:28.454][42896][modelmanager][info][mediapipegraphdefinition.cpp:301] Mediapipe: Qwen3-8B outputs: 
+name: output; mapping: ; shape: (); precision: UNDEFINED; layout: ...
+[2026-10-17 19:32:28.454][42896][modelmanager][info][mediapipegraphdefinition.cpp:302] Mediapipe: Qwen3-8B kfs pass through: false
+[2026-10-17 19:32:28.454][42896][modelmanager][info][pipelinedefinitionstatus.hpp:61] Mediapipe: Qwen3-8B state changed to: AVAILABLE after handling: ValidationPassedEvent: 
+[2026-10-17 19:32:28.456][43948][modelmanager][info][modelmanager.cpp:1213] Started cleaner thread
+[2026-10-17 19:32:28.456][44624][serving][info][servablemanagermodule.cpp:55] ServableManagerModule started
+[2026-10-17 19:32:28.457][44980][modelmanager][info][modelmanager.cpp:1184] Started model manager thread
+[2026-10-17 19:32:28.733][44904][llm_executor][info][executor_base.hpp:71] All requests: 1;
+[2026-10-17 19:32:36.193][44904][llm_executor][info][executor_base.hpp:71] All requests: 0;
+[2026-10-17 19:32:36.215][44904][llm_executor][info][executor_base.hpp:71] All requests: 1;
+[2026-10-17 19:32:40.848][44904][llm_executor][info][executor_base.hpp:71] All requests: 0;
+[2026-10-17 19:32:40.874][39264][llm_calculator][warning][servable.cpp:87] Endpoint /v3/v1/chat/completions is deprecated. Use /v1/ prefix instead.
+[2026-10-17 19:32:40.876][44904][llm_executor][info][executor_base.hpp:71] All requests: 1;
+[2026-10-17 19:32:45.526][44904][llm_executor][info][executor_base.hpp:71] All requests: 0;
+[2026-10-17 19:32:45.557][44904][llm_executor][info][executor_base.hpp:71] All requests: 1;
+[2026-10-17 19:33:16.282][44904][llm_executor][info][executor_base.hpp:71] All requests: 0;
+[2026-10-17 19:33:16.311][44904][llm_executor][info][executor_base.hpp:71] All requests: 1;
+[2026-10-17 19:33:49.538][44904][llm_executor][info][executor_base.hpp:71] All requests: 0;
+[2026-10-17 19:33:49.559][44904][llm_executor][info][executor_base.hpp:71] All requests: 1;
+[2026-10-17 19:34:16.780][44904][llm_executor][info][executor_base.hpp:71] All requests: 0;
+[2026-10-17 19:34:16.795][44904][llm_executor][info][executor_base.hpp:71] All requests: 1;
+[2026-10-17 19:34:43.334][44904][llm_executor][info][executor_base.hpp:71] All requests: 0;
+[2026-10-17 19:34:43.359][44904][llm_executor][info][executor_base.hpp:71] All requests: 1;
+[2026-10-17 19:35:17.928][44904][llm_executor][info][executor_base.hpp:71] All requests: 0;
+[2026-10-17 19:35:17.948][44904][llm_executor][info][executor_base.hpp:71] All requests: 1;
+[2026-10-17 19:35:52.328][44904][llm_executor][info][executor_base.hpp:71] All requests: 0;
+[2026-10-17 19:35:52.335][44904][llm_executor][info][executor_base.hpp:71] All requests: 1;
+[2026-10-17 19:36:26.805][44904][llm_executor][info][executor_base.hpp:71] All requests: 0;
+[2026-10-17 19:36:26.836][44904][llm_executor][info][executor_base.hpp:71] All requests: 1;
+[2026-10-17 19:37:36.968][44904][llm_executor][info][executor_base.hpp:71] All requests: 0;
+[2026-10-17 19:37:36.999][44904][llm_executor][info][executor_base.hpp:71] All requests: 1;
+[2026-10-17 19:38:44.608][44904][llm_executor][info][executor_base.hpp:71] All requests: 0;
+[2026-10-17 19:38:44.646][44904][llm_executor][info][executor_base.hpp:71] All requests: 1;
+[2026-10-17 19:39:47.858][44904][llm_executor][info][executor_base.hpp:71] All requests: 0;
+[2026-10-17 19:39:47.890][44904][llm_executor][info][executor_base.hpp:71] All requests: 1;
+[2026-10-17 19:39:54.886][44904][llm_executor][info][executor_base.hpp:71] All requests: 0;

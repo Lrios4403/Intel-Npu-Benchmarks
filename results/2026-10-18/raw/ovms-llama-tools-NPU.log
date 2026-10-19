@@ -1,0 +1,74 @@
+[2026-10-18 18:05:06.659][12180][serving][info][server.cpp:115] OpenVINO Model Server 2026.4.0.869b2186
+[2026-10-18 18:05:06.659][12180][serving][info][server.cpp:116] OpenVINO backend 2026.4.0-22959-99c81491cc3-releases/2026/4
+[2026-10-18 18:05:06.659][12180][serving][info][server.cpp:119] OpenVINO GenAI backend 2026.4.0.0-3407-7ea2546852a
+[2026-10-18 18:05:06.670][35916][modelmanager][info][servable_loading_queue.cpp:89] Started servable loading queue thread
+[2026-10-18 18:05:09.112][12180][modelmanager][info][modelmanager.cpp:252] Available devices for Open VINO: CPU, GPU.0, GPU.1, NPU
+[2026-10-18 18:05:09.115][12180][serving][info][capimodule.cpp:40] C-APIModule starting
+[2026-10-18 18:05:09.115][12180][serving][info][capimodule.cpp:42] C-APIModule started
+[2026-10-18 18:05:09.115][12180][serving][info][grpcservermodule.cpp:106] GRPCServerModule starting
+[2026-10-18 18:05:09.115][12180][serving][info][grpcservermodule.cpp:110] GRPCServerModule started
+[2026-10-18 18:05:09.115][12180][serving][info][grpcservermodule.cpp:111] Port was not set. GRPC server will not be started.
+[2026-10-18 18:05:09.115][12180][serving][info][httpservermodule.cpp:35] HTTPServerModule starting
+[2026-10-18 18:05:09.115][12180][serving][info][httpservermodule.cpp:39] Will start 24 REST workers
+[2026-10-18 18:05:09.116][13332][serving][info][drogon_http_server.cpp:157] Binding REST server to address: 127.0.0.1:8000
+[2026-10-18 18:05:09.167][12180][serving][info][drogon_http_server.cpp:187] REST server listening on port 8000 with 24 unary threads and 24 streaming threads
+[2026-10-18 18:05:09.167][12180][serving][info][http_server.cpp:242] API key not provided via --api_key_file or API_KEY environment variable. Authentication will be disabled.
+[2026-10-18 18:05:09.167][12180][serving][info][httpservermodule.cpp:52] HTTPServerModule started
+[2026-10-18 18:05:09.167][12180][serving][info][httpservermodule.cpp:53] Started REST server at 127.0.0.1:8000
+[2026-10-18 18:05:09.174][12180][serving][info][libgit2.cpp:1344] Path "%USERPROFILE%\Downloads\models\llmware\llama-3.1-8b-instruct-npu-ov" exists but is not a git repository. Skipping download and using existing files.
+Model: llmware/llama-3.1-8b-instruct-npu-ov downloaded to: %USERPROFILE%\Downloads\models\llmware\llama-3.1-8b-instruct-npu-ov
+Graph: graph.pbtxt created in: %USERPROFILE%\Downloads\models\llmware\llama-3.1-8b-instruct-npu-ov
+[2026-10-18 18:05:09.177][12180][serving][info][servablemanagermodule.cpp:51] ServableManagerModule starting
+[2026-10-18 18:05:09.193][35916][serving][info][mediapipegraphdefinition.cpp:643] MediapipeGraphDefinition initializing graph nodes
+[2026-10-18 18:05:09.193][35916][modelmanager][info][servable_initializer.cpp:697] Initializing Language Model Legacy servable
+[2026-10-18 18:07:57.496][35916][llm_calculator][info][servable_initializer.cpp:228] Using manually configured tool_parser: llama3
+[2026-10-18 18:07:57.589][36680][llm_executor][info][executor_base.hpp:71] All requests: 0;
+[2026-10-18 18:07:57.623][35916][modelmanager][info][mediapipegraphdefinition.cpp:300] Mediapipe: Llama-3.1-8B inputs: 
+name: input; mapping: ; shape: (); precision: UNDEFINED; layout: ...
+[2026-10-18 18:07:57.623][35916][modelmanager][info][mediapipegraphdefinition.cpp:301] Mediapipe: Llama-3.1-8B outputs: 
+name: output; mapping: ; shape: (); precision: UNDEFINED; layout: ...
+[2026-10-18 18:07:57.623][35916][modelmanager][info][mediapipegraphdefinition.cpp:302] Mediapipe: Llama-3.1-8B kfs pass through: false
+[2026-10-18 18:07:57.624][35916][modelmanager][info][pipelinedefinitionstatus.hpp:61] Mediapipe: Llama-3.1-8B state changed to: AVAILABLE after handling: ValidationPassedEvent: 
+[2026-10-18 18:07:57.626][30268][modelmanager][info][modelmanager.cpp:1213] Started cleaner thread
+[2026-10-18 18:07:57.626][12180][serving][info][servablemanagermodule.cpp:55] ServableManagerModule started
+[2026-10-18 18:07:57.626][45832][modelmanager][info][modelmanager.cpp:1184] Started model manager thread
+[2026-10-18 18:07:57.969][36680][llm_executor][info][executor_base.hpp:71] All requests: 1;
+[2026-10-18 18:08:07.036][36680][llm_executor][info][executor_base.hpp:71] All requests: 0;
+[2026-10-18 18:08:07.085][36680][llm_executor][info][executor_base.hpp:71] All requests: 1;
+[2026-10-18 18:08:14.168][36680][llm_executor][info][executor_base.hpp:71] All requests: 0;
+[2026-10-18 18:08:14.179][36680][llm_executor][info][executor_base.hpp:71] All requests: 1;
+[2026-10-18 18:08:22.141][36680][llm_executor][info][executor_base.hpp:71] All requests: 0;
+[2026-10-18 18:08:22.161][36680][llm_executor][info][executor_base.hpp:71] All requests: 1;
+[2026-10-18 18:08:29.917][36680][llm_executor][info][executor_base.hpp:71] All requests: 0;
+[2026-10-18 18:08:29.931][36680][llm_executor][info][executor_base.hpp:71] All requests: 1;
+[2026-10-18 18:08:37.790][36680][llm_executor][info][executor_base.hpp:71] All requests: 0;
+[2026-10-18 18:08:37.801][36680][llm_executor][info][executor_base.hpp:71] All requests: 1;
+[2026-10-18 18:08:44.959][36680][llm_executor][info][executor_base.hpp:71] All requests: 0;
+[2026-10-18 18:08:44.997][36680][llm_executor][info][executor_base.hpp:71] All requests: 1;
+[2026-10-18 18:08:52.146][36680][llm_executor][info][executor_base.hpp:71] All requests: 0;
+[2026-10-18 18:08:52.154][36680][llm_executor][info][executor_base.hpp:71] All requests: 1;
+[2026-10-18 18:09:00.855][36680][llm_executor][info][executor_base.hpp:71] All requests: 0;
+[2026-10-18 18:09:00.865][36680][llm_executor][info][executor_base.hpp:71] All requests: 1;
+[2026-10-18 18:09:09.480][36680][llm_executor][info][executor_base.hpp:71] All requests: 0;
+[2026-10-18 18:09:09.489][36680][llm_executor][info][executor_base.hpp:71] All requests: 1;
+[2026-10-18 18:09:16.941][36680][llm_executor][info][executor_base.hpp:71] All requests: 0;
+[2026-10-18 18:09:16.953][36680][llm_executor][info][executor_base.hpp:71] All requests: 1;
+[2026-10-18 18:09:26.772][36680][llm_executor][info][executor_base.hpp:71] All requests: 0;
+[2026-10-18 18:09:26.805][36680][llm_executor][info][executor_base.hpp:71] All requests: 1;
+[2026-10-18 18:09:34.849][36680][llm_executor][info][executor_base.hpp:71] All requests: 0;
+[2026-10-18 18:09:34.860][36680][llm_executor][info][executor_base.hpp:71] All requests: 1;
+[2026-10-18 18:09:47.364][36680][llm_executor][info][executor_base.hpp:71] All requests: 0;
+[2026-10-18 18:09:47.373][36680][llm_executor][info][executor_base.hpp:71] All requests: 1;
+[2026-10-18 18:09:58.991][36680][llm_executor][info][executor_base.hpp:71] All requests: 0;
+[2026-10-18 18:09:59.012][36680][llm_executor][info][executor_base.hpp:71] All requests: 1;
+[2026-10-18 18:10:06.142][36680][llm_executor][info][executor_base.hpp:71] All requests: 0;
+[2026-10-18 18:10:06.157][36680][llm_executor][info][executor_base.hpp:71] All requests: 1;
+[2026-10-18 18:10:15.121][36680][llm_executor][info][executor_base.hpp:71] All requests: 0;
+[2026-10-18 18:10:15.133][36680][llm_executor][info][executor_base.hpp:71] All requests: 1;
+[2026-10-18 18:10:22.174][36680][llm_executor][info][executor_base.hpp:71] All requests: 0;
+[2026-10-18 18:10:22.221][36680][llm_executor][info][executor_base.hpp:71] All requests: 1;
+[2026-10-18 18:10:30.088][36680][llm_executor][info][executor_base.hpp:71] All requests: 0;
+[2026-10-18 18:10:30.098][36680][llm_executor][info][executor_base.hpp:71] All requests: 1;
+[2026-10-18 18:10:37.430][36680][llm_executor][info][executor_base.hpp:71] All requests: 0;
+[2026-10-18 18:10:37.469][36680][llm_executor][info][executor_base.hpp:71] All requests: 1;
+[2026-10-18 18:10:44.438][36680][llm_executor][info][executor_base.hpp:71] All requests: 0;

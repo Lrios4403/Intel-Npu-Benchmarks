@@ -1,0 +1,78 @@
+[
+  {
+    "phase": "idle",
+    "minutes": 5.1,
+    "samples": 151,
+    "cpu_util_pct": {
+      "mean": 24.2,
+      "max": 82.5
+    },
+    "package_w": {
+      "mean": 25.7,
+      "max": 69.9
+    },
+    "cores_w": 15.3,
+    "igpu_w": 0.4,
+    "ram_available_gb_min": 2.7,
+    "ram_committed_gb_max": 61.4,
+    "npu_util_pct": {
+      "mean": 0,
+      "max": 0
+    },
+    "igpu_util_pct": {
+      "mean": 12.6,
+      "max": 27.6
+    },
+    "npu_shared_mem_gb_max": 0,
+    "igpu_shared_mem_gb_max": 1.68,
+    "rtx": {
+      "power_w_mean": 17.5,
+      "power_w_max": 29.0,
+      "util_pct_mean": 21.1,
+      "vram_gb_max": 1.59,
+      "temp_c_max": 57.0
+    },
+    "thermal_zone_c_max": 27.9,
+    "ovms_ws_gb_max": null,
+    "ollama_ws_gb_max": 0.02,
+    "disk_mb_s_mean": 24.9
+  },
+  {
+    "phase": "ovms-NPU-prefix-true",
+    "minutes": 1.9,
+    "samples": 57,
+    "cpu_util_pct": {
+      "mean": 27.6,
+      "max": 88.2
+    },
+    "package_w": {
+      "mean": 40.1,
+      "max": 79.8
+    },
+    "cores_w": 23.9,
+    "igpu_w": 0.5,
+    "ram_available_gb_min": 0.1,
+    "ram_committed_gb_max": 58.6,
+    "npu_util_pct": {
+      "mean": 64.9,
+      "max": 108.9
+    },
+    "igpu_util_pct": {
+      "mean": 17.5,
+      "max": 31
+    },
+    "npu_shared_mem_gb_max": 8.62,
+    "igpu_shared_mem_gb_max": 1.69,
+    "rtx": {
+      "power_w_mean": 18.1,
+      "power_w_max": 21.4,
+      "util_pct_mean": 29.1,
+      "vram_gb_max": 1.37,
+      "temp_c_max": 52.0
+    },
+    "thermal_zone_c_max": 27.9,
+    "ovms_ws_gb_max": 11.18,
+    "ollama_ws_gb_max": 0.02,
+    "disk_mb_s_mean": 124.9
+  }
+]

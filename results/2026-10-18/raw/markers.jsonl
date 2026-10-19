@@ -1,0 +1,4 @@
+{"t": 1792379238.2306578, "label": "baseline-idle (no server)"}
+{"t": 1792379358.2334688, "label": "npu:startup"}
+{"t": 1792379381.4045033, "label": "npu:idle (server loaded)"}
+{"t": 1792379561.405753, "label": "npu:thinking"}

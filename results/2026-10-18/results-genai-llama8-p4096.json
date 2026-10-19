@@ -1,0 +1,217 @@
+{
+  "label": "llama8-p4096",
+  "cold": {
+    "label": "llama8-p4096",
+    "model": "llmware\\llama-3.1-8b-instruct-npu-ov",
+    "device": "NPU",
+    "config": {
+      "MAX_PROMPT_LEN": 4096,
+      "MIN_RESPONSE_LEN": 256,
+      "CACHE_DIR": "<scratch>\\genai\\cache\\llama8-p4096"
+    },
+    "warm": false,
+    "openvino_genai": "2026.4.1.0-3408-ab01d1771e4",
+    "load_s": 160.7,
+    "runs": [
+      {
+        "size": "short",
+        "input_tokens": 70,
+        "output_tokens": 256,
+        "ttft_s": 5.844,
+        "tpot_ms": 100.4,
+        "decode_tps": 9.96,
+        "throughput_tps": 9.96,
+        "wall_s": 31.46,
+        "prefill_tps": 12.0,
+        "text": "**CPU Cache Overview**\n\nA CPU cache is a small, high-speed memory cache built into the central processing unit (CPU). It acts as a buffer between the main memory and the CPU, significantly improving system performance.\n\n**How it Works**\n\nHere's a simplified explanation:\n\n1. **Data Access**: When the CPU requests data from the main memory, it first checks the cache. If the requested data is already stored in the cache, it's called a **cache hit**.\n2. **Cache Miss**: If the data is not in the cache, the CPU retrieves it from the main memory and stores it in the cache.\n3. **Cache Replacement**: W"
+      },
+      {
+        "size": "short",
+        "input_tokens": 70,
+        "output_tokens": 256,
+        "ttft_s": 4.746,
+        "tpot_ms": 97.4,
+        "decode_tps": 10.26,
+        "throughput_tps": 10.26,
+        "wall_s": 29.6,
+        "prefill_tps": 14.7
+      },
+      {
+        "size": "short",
+        "input_tokens": 70,
+        "output_tokens": 256,
+        "ttft_s": 4.789,
+        "tpot_ms": 97.7,
+        "decode_tps": 10.24,
+        "throughput_tps": 10.24,
+        "wall_s": 29.69,
+        "prefill_tps": 14.6
+      },
+      {
+        "size": "medium",
+        "input_tokens": 779,
+        "output_tokens": 237,
+        "ttft_s": 4.853,
+        "tpot_ms": 98.7,
+        "decode_tps": 10.13,
+        "throughput_tps": 10.13,
+        "wall_s": 28.16,
+        "prefill_tps": 160.5,
+        "text": "The provided text describes the evolution of personal computing from its early days to the present. The text highlights the significant advancements in hardware and software that have occurred over the years.\n\nIn the early days of personal computing, hobbyists assembled machines from kits, wrote programs in BASIC, and traded software on cassette tapes and floppy disks. Memory was measured in kilobytes, storage was slow, and every byte mattered, so programmers learned to squeeze routines into tight loops and lookup tables.\n\nOver the following decades, processors gained caches, pipelines, multip"
+      },
+      {
+        "size": "medium",
+        "input_tokens": 779,
+        "output_tokens": 237,
+        "ttft_s": 4.753,
+        "tpot_ms": 98.3,
+        "decode_tps": 10.18,
+        "throughput_tps": 10.18,
+        "wall_s": 27.95,
+        "prefill_tps": 163.9
+      },
+      {
+        "size": "medium",
+        "input_tokens": 779,
+        "output_tokens": 237,
+        "ttft_s": 4.725,
+        "tpot_ms": 98.0,
+        "decode_tps": 10.2,
+        "throughput_tps": 10.2,
+        "wall_s": 27.86,
+        "prefill_tps": 164.9
+      },
+      {
+        "size": "long",
+        "input_tokens": 3607,
+        "output_tokens": 210,
+        "ttft_s": 22.901,
+        "tpot_ms": 108.4,
+        "decode_tps": 9.22,
+        "throughput_tps": 9.22,
+        "wall_s": 45.57,
+        "prefill_tps": 157.5,
+        "text": "The provided text is a repetitive passage that describes the early days of personal computing and the evolution of processors and operating systems over the decades. The passage highlights the shift from simple machines assembled from kits, written programs in BASIC, and traded software on cassette tapes and floppy disks to complex platforms that schedule work across many kinds of hardware.\n\nThe passage emphasizes the importance of memory and storage in the early days of personal computing, where every byte mattered, and programmers learned to squeeze routines into tight loops and lookup table"
+      },
+      {
+        "size": "long",
+        "input_tokens": 3607,
+        "output_tokens": 210,
+        "ttft_s": 22.061,
+        "tpot_ms": 106.4,
+        "decode_tps": 9.4,
+        "throughput_tps": 9.4,
+        "wall_s": 44.31,
+        "prefill_tps": 163.5
+      },
+      {
+        "size": "long",
+        "input_tokens": 3607,
+        "output_tokens": 210,
+        "ttft_s": 21.834,
+        "tpot_ms": 106.5,
+        "decode_tps": 9.39,
+        "throughput_tps": 9.39,
+        "wall_s": 44.1,
+        "prefill_tps": 165.2
+      }
+    ],
+    "memory": {
+      "peak_working_set_gb": 7.98,
+      "peak_private_gb": 2.04
+    }
+  },
+  "warm": {
+    "label": "llama8-p4096",
+    "model": "llmware\\llama-3.1-8b-instruct-npu-ov",
+    "device": "NPU",
+    "config": {
+      "MAX_PROMPT_LEN": 4096,
+      "MIN_RESPONSE_LEN": 256,
+      "CACHE_DIR": "<scratch>\\genai\\cache\\llama8-p4096"
+    },
+    "warm": true,
+    "openvino_genai": "2026.4.1.0-3408-ab01d1771e4",
+    "load_s": 24.8,
+    "runs": [
+      {
+        "size": "short",
+        "input_tokens": 70,
+        "output_tokens": 256,
+        "ttft_s": 6.453,
+        "tpot_ms": 98.0,
+        "decode_tps": 10.2,
+        "throughput_tps": 10.2,
+        "wall_s": 31.47,
+        "prefill_tps": 10.8,
+        "text": "**CPU Cache Overview**\n\nA CPU cache is a small, high-speed memory cache built into the central processing unit (CPU). It acts as a buffer between the main memory and the CPU, significantly improving system performance.\n\n**How it Works**\n\nHere's a simplified explanation:\n\n1. **Data Access**: When the CPU requests data from the main memory, it first checks the cache. If the requested data is already stored in the cache, it's called a **cache hit**.\n2. **Cache Miss**: If the data is not in the cache, the CPU retrieves it from the main memory and stores it in the cache.\n3. **Cache Replacement**: W"
+      },
+      {
+        "size": "medium",
+        "input_tokens": 779,
+        "output_tokens": 237,
+        "ttft_s": 4.702,
+        "tpot_ms": 97.0,
+        "decode_tps": 10.31,
+        "throughput_tps": 10.31,
+        "wall_s": 27.6,
+        "prefill_tps": 165.7,
+        "text": "The provided text describes the evolution of personal computing from its early days to the present. The text highlights the significant advancements in hardware and software that have occurred over the years.\n\nIn the early days of personal computing, hobbyists assembled machines from kits, wrote programs in BASIC, and traded software on cassette tapes and floppy disks. Memory was measured in kilobytes, storage was slow, and every byte mattered, so programmers learned to squeeze routines into tight loops and lookup tables.\n\nOver the following decades, processors gained caches, pipelines, multip"
+      },
+      {
+        "size": "long",
+        "input_tokens": 3607,
+        "output_tokens": 210,
+        "ttft_s": 22.659,
+        "tpot_ms": 107.8,
+        "decode_tps": 9.28,
+        "throughput_tps": 9.28,
+        "wall_s": 45.19,
+        "prefill_tps": 159.2,
+        "text": "The provided text is a repetitive passage that describes the early days of personal computing and the evolution of processors and operating systems over the decades. The passage highlights the shift from simple machines assembled from kits, written programs in BASIC, and traded software on cassette tapes and floppy disks to complex platforms that schedule work across many kinds of hardware.\n\nThe passage emphasizes the importance of memory and storage in the early days of personal computing, where every byte mattered, and programmers learned to squeeze routines into tight loops and lookup table"
+      }
+    ],
+    "memory": {
+      "peak_working_set_gb": 6.68,
+      "peak_private_gb": 2.38
+    }
+  },
+  "summary": {
+    "model": "llmware\\llama-3.1-8b-instruct-npu-ov",
+    "config": {
+      "MAX_PROMPT_LEN": 4096,
+      "MIN_RESPONSE_LEN": 256
+    },
+    "cold_load_s": 160.7,
+    "warm_load_s": 24.8,
+    "cache_mb": 571,
+    "memory": {
+      "peak_working_set_gb": 7.98,
+      "peak_private_gb": 2.04
+    },
+    "load_error": null,
+    "per_size": {
+      "short": {
+        "input_tokens": 70,
+        "output_tokens": 256,
+        "ttft_s": 4.789,
+        "decode_tps": 10.24,
+        "prefill_tps": 14.6
+      },
+      "medium": {
+        "input_tokens": 779,
+        "output_tokens": 237,
+        "ttft_s": 4.753,
+        "decode_tps": 10.18,
+        "prefill_tps": 163.9
+      },
+      "long": {
+        "input_tokens": 3607,
+        "output_tokens": 210,
+        "ttft_s": 22.061,
+        "decode_tps": 9.39,
+        "prefill_tps": 163.5
+      }
+    }
+  }
+}
